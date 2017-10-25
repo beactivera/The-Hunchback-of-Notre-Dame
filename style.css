@@ -1,0 +1,243 @@
+*{
+	margin:0;
+	padding: 0;
+}
+
+body{ width: 100vw;
+      height: 100vh;
+	position: relative;
+}
+
+.notshowing{
+	display: none;
+}
+
+.scene{
+	width:100%;
+	height: 100%;
+	position: absolute;
+	text-align: center;
+}
+
+.scene1 {
+	background-color: aquamarine;
+}
+
+.scene1 h1{
+	
+}      
+
+.square{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width:100%;
+	height: 40%;
+	background-color: black;
+	z-index:10;
+}
+
+.scene2 {
+	background-color: bisque;
+}
+
+.es-dancing{
+	position: absolute;
+	bottom:0;
+	left:0;
+	width:15%;
+	height: 60%;
+	background-color: violet;
+}
+
+.esmeralda {
+	position: absolute;
+	bottom:0;
+	left:0;
+	width:15%;
+	height: 60%;
+	background-color: violet;
+	display: none;
+}
+
+.dancing{
+	animation: dance 4s linear forwards;
+}
+@keyframes dance{
+	
+}
+
+.audience{
+	position: absolute;
+	bottom: 0;
+	left: 15%;
+	width: 60%;
+	height: 30%;
+	background-color: brown;
+}
+
+.kingoffools{
+	position: absolute;
+	bottom: 40%;
+	left: 20%;
+	width: 50%;
+	height: 40%;
+	background-color: forestgreen;
+}
+
+.shakingfool{
+	position: absolute;
+	bottom: 40%;
+	left: 20%;
+	width: 50%;
+	height: 40%;
+	background-color: forestgreen;
+	display: none;
+}
+
+
+.shaking {
+	animation: shake 3s 4s linear forwards;
+}
+@keyframes shake{
+	transition: 25% {
+        transform: translateX(-10px)
+    }
+    75% {
+        transform: translateX(10px)
+    }
+}
+
+.king{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 20%;
+	height: 65%;
+	background-color: red;
+	
+}
+
+.button{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 10%;
+	height: 15%;
+	background-color: yellow;
+	
+}
+
+.scene3{
+	background-color: snow;
+}
+
+.cross{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 20%;
+	height: 65%;
+	background-color: brown;	
+}
+
+.es-praying{
+	position: absolute;
+	bottom: 0;
+	left: 30%;
+	width: 20%;
+	height: 65%;
+	background-color: violet;	
+}
+
+.evil_jean{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 20%;
+	height: 65%;
+	background-color: gray;
+}
+
+.scene4{
+	
+}
+
+.church{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 40%;
+	height: 100%;
+	background-color: gray;
+}
+
+.hunchback{
+	position: absolute;
+	bottom: 0;
+	left: 30%;
+	width: 20%;
+	height: 60%;
+	background-color: green;
+}
+
+.esmeralda{
+	position:absolute;
+	bottom: 0;
+	left: 80%;
+	width: 20%;
+	height: 60%;
+	background-color: violet;
+}
+
+.scene5{
+	
+}
+
+.crowd{
+	position:absolute;
+	bottom: 0;
+	left: 0%;
+	width: 100%;
+	height: 30%;
+	background-color: bisque;
+}
+
+.stage{
+	position:absolute;
+	bottom: 35%;
+	left: 0%;
+	width: 100%;
+	height: 30%;
+	background-color: brown;
+}
+
+.scene6{
+	background-image: /*give the water*/
+}
+
+.scene7{
+	
+}
+
+.party{
+	position:absolute;
+	bottom: 0;
+	left: 0%;
+	width: 100%;
+	height: 30%;
+	background-color: darkgoldenrod;
+	
+}
+
+.scene8{
+	background-image:  /*climax*/
+}
+
+.scene9{
+	background-image: /*fade out*/
+}
+
+.scene10{
+	background-image:  /*credits*/
+}
