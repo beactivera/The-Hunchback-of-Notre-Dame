@@ -32,12 +32,12 @@ function showScene2() {
 	setTimeout(stopDancing, 11000)
 
 	function stopDancing() {
-		esmeralda.style.display = 'block'
+		esmeralda.style.display = 'inline_block'
 		esDancing.style.display = 'none'
 		console.log('stopped dancing');
 		let foolsAudio = new Audio('audio/2_kingoffools.mp3');
 		foolsAudio.play();
-		shakingFool.style.display = 'block'
+		shakingFool.style.display = 'inline_block'
 		kingOfFools.style.display = 'none'
 		console.log('shaking');
 
