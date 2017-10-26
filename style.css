@@ -267,7 +267,34 @@ body{ width: 100vw;
 }
 
 .scene8{
+<<<<<<< HEAD
+	background-image: url('scene-8-climax%20hanging.svg')/*climax*/
+}
+
+.standing_esmeralda{
+   	position:absolute;
+	bottom: 50%;
+	left: 20%;
+	width: 20%;
+	height: 25%;
+	background-image: url(esmeralda-dwg.svg);
+
+	
+	
+}
+
+.people_standing{
+	position:absolute;
+	bottom: 0;
+	left: 0%;
+	width: 100%;
+	height: 30%;
+	background-image: url('people.png');
+
+	
+=======
 	background-image: url(scene-8-climax-hanging.svg);
+>>>>>>> 4bdef5c048fa02bd4857e524e1a7105eedb1afbf
 }
 
 .scene9{
