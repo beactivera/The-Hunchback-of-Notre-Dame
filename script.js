@@ -44,11 +44,76 @@ function showScene2(){
 			console.log('move to scene3');
 			scene3.classList.remove("notshowing");
 			scene2.classList.add("notshowing");
+		
+		setTimeout (showScene4, 2000)
 	}
+	
+
+
+function showScene4(){
+	 console.log('move to scene4');
+	 scene4.classList.remove("notshowing");
+	 scene3.classList.add("notshowing");
+	
+	setTimeout (showScene5,2000)
 }
 
-
-
+function showScene5(){
+	 console.log('move to scene5');
+	 scene5.classList.remove("notshowing");
+	 scene4.classList.add("notshowing");
+	
+	setTimeout (showScene6,2000)
+}
+	
+	function showScene6(){
+	 console.log('move to scene6');
+	 scene6.classList.remove("notshowing");
+	 scene5.classList.add("notshowing");
+	
+	setTimeout (showScene7,2000)
+}
+	
+	function showScene7(){
+	 console.log('move to scene7');
+	 scene7.classList.remove("notshowing");
+	 scene6.classList.add("notshowing");
+	
+	setTimeout (showScene8,2000)
+}
+	
+	function showScene8(){
+	 console.log('move to scene8');
+	 scene8.classList.remove("notshowing");
+	 scene7.classList.add("notshowing");
+	
+	setTimeout (showScene9,2000)
+}
+	function showScene9(){
+	 console.log('move to scene9');
+	 scene9.classList.remove("notshowing");
+	 scene8.classList.add("notshowing");
+	
+	setTimeout (showScene10,2000)
+	}
+	
+	function showScene10(){
+	 console.log('move to scene10');
+	 scene10.classList.remove("notshowing");
+	 scene9.classList.add("notshowing");
+	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
 
 kingOfFools.classList.add("shaking");
 
