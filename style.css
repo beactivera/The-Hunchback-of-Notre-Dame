@@ -56,7 +56,7 @@ body{ width: 100vw;
 	left:0;
 	width:15%;
 	height: 60%;
-	background-color: black;
+	background-color: black; //change background to dancing gif
 }
 
 .esmeralda {
@@ -65,7 +65,7 @@ body{ width: 100vw;
 	left:0;
 	width:15%;
 	height: 60%;
-	background-color: violet;
+	background-image: url('esmeralda-dwg.svg');
 	display: none;
 }
 
@@ -76,7 +76,7 @@ body{ width: 100vw;
 
 }
 
-.audience{
+.audience {
 	position: absolute;
 	bottom: 0;
 	left: 15%;
@@ -91,7 +91,7 @@ body{ width: 100vw;
 	left: 20%;
 	width: 50%;
 	height: 40%;
-	background-color: forestgreen;
+	background-image: url('quasimodo-esmeralda.svg');
 }
 
 .shakingfool{
@@ -100,7 +100,7 @@ body{ width: 100vw;
 	left: 20%;
 	width: 50%;
 	height: 40%;
-	background-color: forestgreen;
+	background-image: url('quasimodo-walk.gif');
 	display: none;
 }
 
@@ -156,7 +156,7 @@ body{ width: 100vw;
 	left: 30%;
 	width: 20%;
 	height: 65%;
-	background-color: violet;
+	background-image: url('esmeralda-dwg.svg');
 }
 
 .evil_jean{
@@ -168,7 +168,8 @@ body{ width: 100vw;
 	background-image: url('jean.svg');
 }
 
-.scene4{
+.scene4 {
+
 
 }
 
@@ -187,7 +188,6 @@ body{ width: 100vw;
 	left: 30%;
 	width: 20%;
 	height: 60%;
-	background-image: url("quasimodo-esmeralda.svg");
 }
 
 .esmeralda{
@@ -196,29 +196,33 @@ body{ width: 100vw;
 	left: 80%;
 	width: 20%;
 	height: 60%;
-	background-color: violet;
+	background-image: url("esmeralda-dwg.svg");
 }
 
-.scene5{
-
-}
-
-.crowd{
+.scene5 {
 	position:absolute;
-	bottom: 0;
+	bottom: 0%;
 	left: 0%;
 	width: 100%;
-	height: 30%;
-	background-color: bisque;
+	height: 100%;
+	background-size: 100% 100%;
+	background-image: url('beating-scene.svg');
 }
 
-.stage{
-	position:absolute;
-	bottom: 35%;
-	left: 0%;
-	width: 100%;
-	height: 30%;
-	background-color: brown;
+.beating {
+	position: absolute;
+	bottom: 40%;
+	right: 25%;
+	width: 20%;
+	height: 20%;
+}
+
+.hunchbackBeat {
+	position: absolute;
+	bottom: 40%;
+	right: 35%;
+	width: 15%;
+	height: 15%;
 }
 
 .scene6{
@@ -231,10 +235,11 @@ body{ width: 100vw;
 
 .quasimodo {
 	background-image: url('quasimodo-dwg.svg');
+	background-size: 30% 40%;
 	position:absolute;
-	bottom: 30%;
-	right: 30%;
-	width: 10%;
+	top: 250px;
+	right: 35%;
+	width: 30%;
 	height: 40%
 }
 
@@ -242,10 +247,10 @@ body{ width: 100vw;
 	background-image: url('esmeralda-watering.png');
 	background-size: 30% 40%;
 	position:absolute;
-	bottom: 30%;
+	top: 250px;
 	left: 30%;
-	width: 10%;
-	height: 40%
+	width: 30%;
+	height: 40%;
 }
 
 .scene7{
@@ -294,10 +299,8 @@ body{ width: 100vw;
 }
 
 .scene10{
-  /*credits*/
-}
-
-	background-image:black;  /*credits*/
+	color: white;
+	background-color:black;  /*credits*/
 }
 
 .credits{
@@ -305,7 +308,8 @@ body{ width: 100vw;
 	justify-content: center;
 	top: 20%;
 	left: 30%;
-    }
+	display: block;
+}
 
 .credits li{
 	list-style-type: none;
@@ -315,4 +319,3 @@ body{ width: 100vw;
 .credits h1 p{
 	color:white;
 }
->>>>>>> origin/master
