@@ -73,7 +73,7 @@ function showScene2() {
 		let evilTalkAudio = new Audio('audio/3_eviltalk.mp3');
 		evilTalkAudio.play();
 
-		setTimeout(showScene4, 98000) //audio is too long
+		setTimeout(showScene4, 10000) 
 	
 	}
 
@@ -86,7 +86,7 @@ function showScene2() {
 		scene4.classList.remove("notshowing");
 		scene3.classList.add("notshowing");
 
-		setTimeout(showScene5, 27000)
+		setTimeout(showScene5, 11000)
 	}
 	
 	
@@ -99,7 +99,7 @@ function showScene2() {
 		scene5.classList.remove("notshowing");
 		scene4.classList.add("notshowing");
 
-		setTimeout(beating, 4000)
+		setTimeout(beating, 4530)
 	}
 
 	function beating() {
@@ -134,7 +134,7 @@ function showScene2() {
 		let waterAudio = new Audio('audio/6_water.mp3');
 		waterAudio.play();
 		
-		setTimeout (showScene7, 27000) // too long?
+		setTimeout (showScene7, 11000) 
 	}
 		
 	function showScene7() {
@@ -153,7 +153,7 @@ function showScene2() {
 		let blameGypsyAudio = new Audio('audio/7_blamegypsy.mp3');
 		blameGypsyAudio.play();
 		
-		setTimeout ( screaming, 4000)
+		setTimeout ( screaming, 4580)
 	}
 	
 	function screaming(){
