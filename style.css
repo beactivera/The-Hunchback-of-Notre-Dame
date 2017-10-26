@@ -201,7 +201,7 @@ body{ width: 100vw;
 
 .scene5 {
 	position:absolute;
-	bottom: 35%;
+	bottom: 0%;
 	left: 0%;
 	width: 100%;
 	height: 100%;
@@ -213,6 +213,14 @@ body{ width: 100vw;
 	position: absolute;
 	bottom: 40%;
 	right: 25%;
+	width: 20%;
+	height: 20%;
+}
+
+.hunchbackBeat {
+	position: absolute;
+	bottom: 40%;
+	right: 35%;
 	width: 15%;
 	height: 15%;
 }
