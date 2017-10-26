@@ -240,6 +240,7 @@ body{ width: 100vw;
 
 .es-watering {
 	background-image: url('esmeralda-watering.png');
+	background-size: 30% 40%;
 	position:absolute;
 	bottom: 30%;
 	left: 30%;
