@@ -15,7 +15,7 @@ let esmeralda = document.querySelector(".esmeralda");
 let audience = document.querySelector(".audience");
 let kingOfFools = document.querySelector(".kingoffools");
 let shakingFool = document.querySelector(".shakingfool");
-let credits = document.querySelector("div .credits");
+let credits = document.querySelector(".credits");
 
 
 
@@ -134,7 +134,7 @@ function showScene2() {
 		let waterAudio = new Audio('audio/6_water.mp3');
 		waterAudio.play();
 		
-		setTimeout (showScene7, 11000) 
+		setTimeout (showScene7, 18000) 
 	}
 		
 	function showScene7() {
