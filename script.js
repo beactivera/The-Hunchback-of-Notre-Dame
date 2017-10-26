@@ -15,6 +15,7 @@ let esmeralda = document.querySelector(".esmeralda");
 let audience = document.querySelector(".audience");
 let kingOfFools = document.querySelector(".kingoffools");
 let shakingFool = document.querySelector(".shakingfool");
+let credits = document.querySelector("div .credits");
 
 
 
@@ -197,6 +198,7 @@ function showScene2() {
 	function showScene10() {
 		console.log('move to scene10');
 		scene10.classList.remove("notshowing");
+		credits.classList.remove("notshowing");
 		scene9.classList.add("notshowing");
 
 	}
