@@ -276,10 +276,8 @@ body{ width: 100vw;
 }
 
 .scene10{
-  /*credits*/
-}
-
-	background-image:black;  /*credits*/
+	color: white;
+	background-color:black;  /*credits*/
 }
 
 .credits{
