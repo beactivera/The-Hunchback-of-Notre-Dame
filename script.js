@@ -72,12 +72,12 @@ function showScene2() {
 		let evilTalkAudio = new Audio('audio/3_eviltalk.mp3');
 		evilTalkAudio.play();
 
-		setTimeout(showScene4, 10000) //audio is too long
+		setTimeout(showScene4, 98000) //audio is too long
+	
 	}
 
 
-
-	function showScene4() {
+	function showScene4(){
         console.log('chase audio');
 		let chaseAudio = new Audio('audio/4_chase.mp3');
 		chaseAudio.play();
@@ -87,6 +87,8 @@ function showScene2() {
 
 		setTimeout(showScene5, 27000)
 	}
+	
+	
 
 	function showScene5() {
        console.log('crowd audio');
@@ -96,7 +98,7 @@ function showScene2() {
 		scene5.classList.remove("notshowing");
 		scene4.classList.add("notshowing");
 
-		setTimeout(beating, 14000)
+		setTimeout(beating, 4000)
 	}
 
 	function beating() {
@@ -131,8 +133,9 @@ function showScene2() {
 		let waterAudio = new Audio('audio/6_water.mp3');
 		waterAudio.play();
 		
-		setTimeout (showScene7, 270000) // too long?
+		setTimeout (showScene7, 27000) // too long?
 	}
+		
 	function showScene7() {
 		console.log('dance audio');
 		let danceAudio = new Audio('audio/7_dance.mp3');
