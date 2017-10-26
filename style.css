@@ -56,7 +56,7 @@ body{ width: 100vw;
 	left:0;
 	width:15%;
 	height: 60%;
-	background-color: black;
+	background-color: black; //change background to dancing gif
 }
 
 .esmeralda {
@@ -65,7 +65,7 @@ body{ width: 100vw;
 	left:0;
 	width:15%;
 	height: 60%;
-	background-color: violet;
+	background-image: url('esmeralda-dwg.svg');
 	display: none;
 }
 
@@ -76,7 +76,7 @@ body{ width: 100vw;
 
 }
 
-.audience{
+.audience {
 	position: absolute;
 	bottom: 0;
 	left: 15%;
@@ -91,7 +91,7 @@ body{ width: 100vw;
 	left: 20%;
 	width: 50%;
 	height: 40%;
-	background-color: forestgreen;
+	background-image: url('quasimodo-esmeralda.svg');
 }
 
 .shakingfool{
@@ -100,7 +100,7 @@ body{ width: 100vw;
 	left: 20%;
 	width: 50%;
 	height: 40%;
-	background-color: forestgreen;
+	background-image: url('quasimodo-walk.gif');
 	display: none;
 }
 
@@ -156,7 +156,7 @@ body{ width: 100vw;
 	left: 30%;
 	width: 20%;
 	height: 65%;
-	background-color: violet;
+	background-image: url('quasimodo-esmeralda.svg');
 }
 
 .evil_jean{
@@ -187,7 +187,7 @@ body{ width: 100vw;
 	left: 30%;
 	width: 20%;
 	height: 60%;
-	background-image: url("quasimodo-esmeralda.svg");
+	background-image: url("esmeralda-dwg.svg");
 }
 
 .esmeralda{
@@ -199,26 +199,24 @@ body{ width: 100vw;
 	background-color: violet;
 }
 
-.scene5{
-
-}
-
-.crowd{
-	position:absolute;
-	bottom: 0;
-	left: 0%;
-	width: 100%;
-	height: 30%;
-	background-color: bisque;
-}
-
-.stage{
+.scene5 {
 	position:absolute;
 	bottom: 35%;
 	left: 0%;
 	width: 100%;
-	height: 30%;
-	background-color: brown;
+	height: 100%;
+	background-size: 100% 100%;
+	background-image: url('beating-scene.svg');
+}
+
+.beating {
+	position: absolute;
+	bottom: 15%;
+	left: 25%;
+	width: 50%;
+	height: 50%;
+	background-color: red;
+	background-image: url('beatIn3Steps.gif');
 }
 
 .scene6{
@@ -231,10 +229,11 @@ body{ width: 100vw;
 
 .quasimodo {
 	background-image: url('quasimodo-dwg.svg');
+	background-size: 30% 40%;
 	position:absolute;
-	bottom: 30%;
-	right: 30%;
-	width: 10%;
+	top: 250px;
+	right: 35%;
+	width: 30%;
 	height: 40%
 }
 
@@ -242,10 +241,10 @@ body{ width: 100vw;
 	background-image: url('esmeralda-watering.png');
 	background-size: 30% 40%;
 	position:absolute;
-	bottom: 30%;
+	top: 250px;
 	left: 30%;
-	width: 10%;
-	height: 40%
+	width: 30%;
+	height: 40%;
 }
 
 .scene7{
