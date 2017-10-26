@@ -168,7 +168,8 @@ body{ width: 100vw;
 	background-image: url('jean.svg');
 }
 
-.scene4{
+.scene4 {
+
 
 }
 
@@ -187,7 +188,6 @@ body{ width: 100vw;
 	left: 30%;
 	width: 20%;
 	height: 60%;
-	background-image: url("quasimodo-esmeralda.svg");
 }
 
 .esmeralda{
@@ -196,7 +196,7 @@ body{ width: 100vw;
 	left: 80%;
 	width: 20%;
 	height: 60%;
-		background-image: url("esmeralda-dwg.svg");
+	background-image: url("esmeralda-dwg.svg");
 }
 
 .scene5 {
@@ -285,7 +285,8 @@ body{ width: 100vw;
 	justify-content: center;
 	top: 20%;
 	left: 30%;
-    }
+	display: block;
+}
 
 .credits li{
 	list-style-type: none;
@@ -295,4 +296,3 @@ body{ width: 100vw;
 .credits h1 p{
 	color:white;
 }
->>>>>>> origin/master
