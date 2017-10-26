@@ -156,7 +156,7 @@ body{ width: 100vw;
 	left: 30%;
 	width: 20%;
 	height: 65%;
-	background-image: url('quasimodo-esmeralda.svg');
+	background-image: url('esmeralda-dwg.svg');
 }
 
 .evil_jean{
@@ -187,7 +187,7 @@ body{ width: 100vw;
 	left: 30%;
 	width: 20%;
 	height: 60%;
-	background-image: url("esmeralda-dwg.svg");
+	background-image: url("quasimodo-esmeralda.svg");
 }
 
 .esmeralda{
@@ -196,7 +196,7 @@ body{ width: 100vw;
 	left: 80%;
 	width: 20%;
 	height: 60%;
-	background-color: violet;
+		background-image: url("esmeralda-dwg.svg");
 }
 
 .scene5 {
@@ -211,12 +211,10 @@ body{ width: 100vw;
 
 .beating {
 	position: absolute;
-	bottom: 15%;
-	left: 25%;
-	width: 50%;
-	height: 50%;
-	background-color: red;
-	background-image: url('beatIn3Steps.gif');
+	bottom: 40%;
+	right: 25%;
+	width: 15%;
+	height: 15%;
 }
 
 .scene6{
