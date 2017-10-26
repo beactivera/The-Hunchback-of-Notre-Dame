@@ -61,10 +61,10 @@ body{ width: 100vw;
 
 .esmeralda {
 	position: absolute;
-	bottom:0;
-	left:0;
-	width:15%;
-	height: 60%;
+	bottom: 0;
+	left: 30%;
+	width: 20%;
+	height: 65%;
 	background-image: url('esmeralda-dwg.svg');
 	display: none;
 }
@@ -116,15 +116,6 @@ body{ width: 100vw;
 	height: 65%;
 	background-image:url('king.svg');
 
-}
-
-.button{
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 10%;
-	height: 15%;
-	background-color: yellow;
 }
 
 .audience {
@@ -187,15 +178,6 @@ body{ width: 100vw;
 	left: 30%;
 	width: 20%;
 	height: 60%;
-}
-
-.esmeralda{
-	position:absolute;
-	bottom: 0;
-	left: 80%;
-	width: 20%;
-	height: 60%;
-	background-image: url("esmeralda-dwg.svg");
 }
 
 .scene5 {
@@ -267,6 +249,7 @@ body{ width: 100vw;
 }
 
 .scene8{
+<<<<<<< HEAD
 	background-image: url('scene-8-climax%20hanging.svg');/*climax*/
 }
 
@@ -287,6 +270,9 @@ body{ width: 100vw;
 	width: 100%;
 	height: 30%;
 	background-image: url('people.png');
+=======
+	background-image: url(scene-8-climax-hanging.svg);
+>>>>>>> faf8925381757ae0a0ac9d6708895b93a04dfc9e
 }
 
 .scene9{

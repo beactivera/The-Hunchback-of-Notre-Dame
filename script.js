@@ -33,7 +33,7 @@ function showScene2() {
 	setTimeout(stopDancing, 11000)
 
 	function stopDancing() {
-		esmeralda.style.display = 'inline_block'
+		esmeralda.style.display = 'block'
 		esDancing.style.display = 'none'
 		console.log('stopped dancing');
 		let foolsAudio = new Audio('audio/2_kingoffools.mp3');
@@ -73,8 +73,8 @@ function showScene2() {
 		let evilTalkAudio = new Audio('audio/3_eviltalk.mp3');
 		evilTalkAudio.play();
 
-		setTimeout(showScene4, 10000) 
-	
+		setTimeout(showScene4, 10000)
+
 	}
 
 
@@ -88,8 +88,8 @@ function showScene2() {
 
 		setTimeout(showScene5, 11000)
 	}
-	
-	
+
+
 
 	function showScene5() {
        console.log('crowd audio');
@@ -120,12 +120,12 @@ function showScene2() {
 
 		setTimeout( hbScream, 12000)
 	}
-	
+
 	function hbScream (){
 		console.log('scream audio');
 		let hbScreamAudio = new Audio('audio/6_hbscream.mp3');
 		hbScreamAudio.play();
-		
+
 		setTimeout( giveWater, 14000)
 	}
 
@@ -133,10 +133,10 @@ function showScene2() {
 		console.log('water audio');
 		let waterAudio = new Audio('audio/6_water.mp3');
 		waterAudio.play();
-		
-		setTimeout (showScene7, 18000) 
+
+		setTimeout (showScene7, 18000)
 	}
-		
+
 	function showScene7() {
 		console.log('dance audio');
 		let danceAudio = new Audio('audio/7_dance.mp3');
@@ -147,24 +147,24 @@ function showScene2() {
 
 		setTimeout( blamingGypsy, 27000)
 	}
-	
+
 	function blamingGypsy(){
 		console.log('blame audio');
 		let blameGypsyAudio = new Audio('audio/7_blamegypsy.mp3');
 		blameGypsyAudio.play();
-		
+
 		setTimeout ( screaming, 4580)
 	}
-	
+
 	function screaming(){
 		console.log('scream audio');
 		let screamAudio = new Audio('audio/7_murderscream.mp3');
 		screamAudio.play();
-		
+
 		setTimeout (showScene8, 6000)
 	}
-	
-	
+
+
 	function showScene8() {
 		console.log('drama music audio');
 		let dramaticMusicAudio = new Audio ('audio/8_dramaticmusic.mp3');
@@ -186,12 +186,12 @@ function showScene2() {
 
 		setTimeout( theEnd, 5000)
 	}
-	
+
 	function theEnd(){
 		console.log('holy audio');
 		let holyAudio = new Audio ('audio/8_holymusic.mp3');
 		holyAudio.play();
-		
+
 		setTimeout(showScene10,31000)  // too long?
 	}
 
