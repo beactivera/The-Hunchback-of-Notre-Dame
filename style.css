@@ -1,6 +1,7 @@
 *{
 	margin:0;
 	padding: 0;
+	background-repeat: no-repeat;
 }
 
 body{ width: 100vw;
@@ -177,7 +178,7 @@ body{ width: 100vw;
 	left: 30%;
 	width: 20%;
 	height: 60%;
-	background-color: green;
+	background-image: url("quasimodo-esmeralda.svg");
 }
 
 .esmeralda{
