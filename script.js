@@ -1,6 +1,7 @@
 let scene1 = document.querySelector(".scene1");
 let scene01 =document.querySelector(".scene01");
 let scene2 = document.querySelector(".scene2");
+let scene02 = document.querySelector(".scene02");
 let scene3 = document.querySelector(".scene3");
 let scene4 = document.querySelector(".scene4");
 let scene5 = document.querySelector(".scene5");
@@ -14,8 +15,8 @@ let church_intro = document.querySelector(".church_intro");
 let esDancing = document.querySelector(".es-dancing");
 let esmeralda = document.querySelector(".esmeralda");
 let audience = document.querySelector(".audience");
-let kingOfFools = document.querySelector(".kingoffools");
-let shakingFool = document.querySelector(".shakingfool");
+/*let kingOfFools = document.querySelector(".kingoffools");
+let shakingFool = document.querySelector(".shakingfool");*/
 let credits = document.querySelector(".credits");
 
 
@@ -41,11 +42,19 @@ function showScene2() {
 	dancingAudio.play() //starts music
 
 
-	setTimeout(showScene3, 11000)
+	setTimeout(showScene02, 11000)
 
 	}
+	
+	function showScene02(){
+		
+		scene02.classList.remove("notshowing");
+		scene2.classList.add("notshowing");
+		
+		setTimeout(showScene3, 3000)
+	}
 
-	function showScene3() {
+	/*function showScene3() {
 		console.log('holymusic audio');
 		let holyMusicAudio = new Audio('audio/3_holymusic.mp3');
 		holyMusicAudio.play();
@@ -63,29 +72,47 @@ function showScene2() {
 
 		setTimeout(showScene4, 10000)
 
-	}
+	}*/
 
 
-	function showScene4(){
+	function showScene3(){
+		scene3.classList.remove("notshowing");
+		scene02.classList.add("notshowing");
+		
+		let hunchback_chasing =document.querySelector(".hunchback");
+		
+		hunchback_chasing.addEventListener('click', startScream)
+		
+		function startScream(){
+			
+			console.log('scream audio');
+		let screamNewAudio = new Audio('audio/7_murderscream.mp3');
+		screamNewAudio.play();
+			
+			setTimeout(chasing, 6000)
+		}
+		
+		function chasing(){
+			
         console.log('chase audio');
 		let chaseAudio = new Audio('audio/4_chase.mp3');
 		chaseAudio.play();
-		console.log('move to scene4');
-		scene4.classList.remove("notshowing");
-		scene3.classList.add("notshowing");
+		
 
 		setTimeout(showScene5, 11000)
 	}
 
-
+	}
 
 	function showScene5() {
+		scene5.classList.remove("notshowing");
+		scene3.classList.add("notshowing");
+
+		
        console.log('crowd audio');
 		let crowdTalkAudio = new Audio('audio/5_crowdtalk.mp3');
 		crowdTalkAudio.play();
-		console.log('move to scene5');
-		scene5.classList.remove("notshowing");
-		scene4.classList.add("notshowing");
+
 
 		setTimeout(beating, 4530)
 	}
