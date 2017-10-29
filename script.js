@@ -1,4 +1,5 @@
 let scene1 = document.querySelector(".scene1");
+let scene01 =document.querySelector(".scene01");
 let scene2 = document.querySelector(".scene2");
 let scene3 = document.querySelector(".scene3");
 let scene4 = document.querySelector(".scene4");
@@ -9,7 +10,7 @@ let scene8 = document.querySelector(".scene8");
 let scene9 = document.querySelector(".scene9");
 let scene10 = document.querySelector(".scene10");
 
-let square = document.querySelector(".square");
+let church_intro = document.querySelector(".church_intro");
 let esDancing = document.querySelector(".es-dancing");
 let esmeralda = document.querySelector(".esmeralda");
 let audience = document.querySelector(".audience");
@@ -20,13 +21,20 @@ let credits = document.querySelector(".credits");
 
 
 
-square.addEventListener('click', showScene2);
+church_intro.addEventListener('click', showScene01);
+
+function showScene01(){
+	scene01.classList.remove("notshowing");
+	scene1.classList.add("notshowing");
+	
+	setTimeout(showScene2, 4000)
+}
 
 function showScene2() {
 	let dancingAudio = new Audio('audio/2_dance.mp3') //selects document
 	dancingAudio.play() //starts music
 	scene2.classList.remove("notshowing");
-	scene1.classList.add("notshowing");
+	scene01.classList.add("notshowing");
 
 
 
