@@ -186,9 +186,8 @@ body{ width: 100vw;
 	position: absolute;
 	bottom: 0;
 	left: 30%;
-	width: 20%;
-	height: 65%;
-	background-image: url('esmeralda-dwg.svg');
+	width: 5%;
+	height: 10%;
 }
 
 .evil_jean{
@@ -265,8 +264,8 @@ body{ width: 100vw;
 	position: absolute;
 	bottom: 40%;
 	right: 35%;
-	width: 15%;
-	height: 15%;
+	width: 7.5%;
+	height: 10%;
 }
 
 .scene6{
@@ -288,13 +287,11 @@ body{ width: 100vw;
 }
 
 .es-watering {
-	background-image: url('esmeralda-watering.png');
-	background-size: 30% 40%;
 	position:absolute;
 	top: 250px;
 	left: 30%;
-	width: 30%;
-	height: 40%;
+	width: 5%;
+	height: 20%;
 }
 
 .scene7{
