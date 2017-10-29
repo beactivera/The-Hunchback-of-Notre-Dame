@@ -10,15 +10,25 @@ body{ width: 100vw;
 	background-color: lightgrey;
 }
 
-.notshowing{
+.notshowing {
 	display: none;
 }
 
-.scene{
+.scene {
 	width:100%;
 	height: 100%;
 	position: absolute;
 	text-align: center;
+}
+
+.scene01 img {
+	height: 100%;
+}
+
+.scene01 {
+	background-color: #3A3939;
+	width: 100%;
+	height: 100%;
 }
 
 .scene1{
@@ -70,6 +80,15 @@ body{ width: 100vw;
 }
 
 .es-dancing {
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+	width: 20%;
+	height: 65%;
+	background-image: url('esmeralda-dwg.svg'); //change to gif
+}
+
+.es-standing {
 	position: absolute;
 	bottom: 0;
 	left: 10%;
