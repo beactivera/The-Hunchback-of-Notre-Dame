@@ -31,39 +31,19 @@ function showScene01(){
 }
 
 function showScene2() {
-	let dancingAudio = new Audio('audio/2_dance.mp3') //selects document
-	dancingAudio.play() //starts music
 	scene2.classList.remove("notshowing");
 	scene01.classList.add("notshowing");
+	
+	esDancing.addEventListener('click', startDancingAudio)
+	
+	function startDancingAudio(){
+	let dancingAudio = new Audio('audio/2_dance.mp3') //selects document
+	dancingAudio.play() //starts music
 
 
-
-	setTimeout(stopDancing, 11000)
-
-	function stopDancing() {
-		esmeralda.style.display = 'block'
-		esDancing.style.display = 'none'
-		console.log('stopped dancing');
-		let foolsAudio = new Audio('audio/2_kingoffools.mp3');
-		foolsAudio.play();
-		shakingFool.style.display = 'inline_block'
-		kingOfFools.style.display = 'none'
-		console.log('shaking');
-
-
-		setTimeout(playLaugh, 15000)
-
+	setTimeout(showScene3, 11000)
 
 	}
-
-	function playLaugh() {
-		console.log('laugh audio');
-		let laughingAudio = new Audio('audio/2_laugh.mp3');
-		laughingAudio.play();
-
-		setTimeout(showScene3, 8000)
-	}
-
 
 	function showScene3() {
 		console.log('holymusic audio');
