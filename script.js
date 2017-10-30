@@ -13,18 +13,20 @@ let scene10 = document.querySelector(".scene10");
 
 let church_intro = document.querySelector(".church_intro");
 let esDancing = document.querySelector(".es-dancing");
+let esStanding = document.querySelector(".es-standing");
 let esmeralda = document.querySelector(".esmeralda");
 let audience = document.querySelector(".audience");
 let kingOfFools = document.querySelector(".kingoffools");
 let shakingFool = document.querySelector(".shakingfool");
 let credits = document.querySelector(".credits");
+let watered = 0;
 
 
 
 
 church_intro.addEventListener('click', showScene01);
 
-function showScene01(){
+function showScene01() {
 	scene01.classList.remove("notshowing");
 	scene1.classList.add("notshowing");
 
@@ -37,6 +39,7 @@ function showScene01(){
 function showScene2() {
 	scene2.classList.remove("notshowing");
 	scene01.classList.add("notshowing");
+<<<<<<< HEAD
 	
 	document.getElementById('es-dancing').classList.remove("notshowing");
 	document.getElementById('es-standing').classList.add("notshowing");
@@ -59,32 +62,66 @@ function showScene2() {
 	}
 	}
 	
+=======
+	console.log('showing scene 2')
 
-	function showScene02(){
+	console.log('danceClick is' + danceClick)
+
+	esStanding.addEventListener('click', startDancingAudio)
+
+}
+
+let danceClick = 0
+
+
+function startDancingAudio() {
+		console.log('fun startDancingAudio executed')
+		if (danceClick == 0) {
+			danceClick ++
+			console.log('danceClick is' + danceClick)
+			let dancingAudio = new Audio('audio/2_dance.mp3') //selects document
+			dancingAudio.play() //starts music
+			document.getElementById('es-dancing').classList.remove("notshowing");
+			document.getElementById('es-standing').classList.add("notshowing");
+
+
+			setTimeout(showScene02, 11000)
+		}
+}
+
+>>>>>>> 5b3a03ef9ccdf0fda4e428306a9279a671084077
+
+
+function showScene02() {
 
 		scene02.classList.remove("notshowing");
 		scene2.classList.add("notshowing");
 
 		setTimeout(showScene3, 3000)
-	}
+}
 
 
-	function showScene3(){
+function showScene3() {
 		scene3.classList.remove("notshowing");
 		scene02.classList.add("notshowing");
 
 		let hunchback_chasing =document.querySelector(".hunchback");
+<<<<<<< HEAD
 		let hunchback_standing =document.querySelector(".hunchback_standing");
 		let esmeralda_standing =document.querySelector(".esmeralda_standing");
 		
 		hunchback_chasing.classList.add("notshowing");
 		esmeralda.classList.add("notshowing");
         
+=======
+
+>>>>>>> 5b3a03ef9ccdf0fda4e428306a9279a671084077
 		let screamClick = 0
 		hunchback_chasing.addEventListener('click', startScream)
 	
 		
 		function startScream(){
+<<<<<<< HEAD
 			
 		hunchback_standing.classList.add("notshowing");
 		hunchback_chasing.classList.remove("notshowing");
@@ -103,6 +140,17 @@ function showScene2() {
 
 			setTimeout(chasing, 6000)
 		}
+=======
+      if(screamClick == 0){
+				screamClick++;
+
+				console.log('scream audio');
+				let screamNewAudio = new Audio('audio/7_murderscream.mp3');
+				screamNewAudio.play();
+
+				setTimeout(chasing, 6000)
+			}
+>>>>>>> 5b3a03ef9ccdf0fda4e428306a9279a671084077
 		}
 	
 		function chasing(){
@@ -115,9 +163,9 @@ function showScene2() {
 		setTimeout(showScene5, 11000)
 	}
 
-	}
+}
 
-	function showScene5() {
+function showScene5() {
 		scene5.classList.remove("notshowing");
 		scene3.classList.add("notshowing");
 
@@ -130,7 +178,7 @@ function showScene2() {
 		setTimeout(beating, 4530)
 	}
 
-	function beating() {
+function beating() {
 		console.log('whip audio');
 		let whipAudio = new Audio('audio/5_whip.mp3');
 		whipAudio.play();
@@ -138,41 +186,64 @@ function showScene2() {
 		setTimeout(showScene6, 13000)
 	}
 
-	function showScene6() {
+
+function showScene6() {
 		console.log('laugh audio');
-		let laughAudio = new Audio('audio/6_laugh.mp3');
-		laughAudio.play();
+		let waterAudio = new Audio('audio/6_water.mp3');
+		waterAudio.play();
 		console.log('move to scene6');
 		scene6.classList.remove("notshowing");
 		scene5.classList.add("notshowing");
 
-		setTimeout( hbScream, 12000)
-	}
 
-	function hbScream (){
-		console.log('scream audio');
-		let hbScreamAudio = new Audio('audio/6_hbscream.mp3');
-		hbScreamAudio.play();
+		document.getElementById('hunchbackLean').addEventListener('click', giveWaterNow)
 
-		setTimeout( giveWater, 14000)
-	}
+		function giveWaterNow() {
+			document.getElementById('es-watering').classList.remove("notshowing")
+			document.getElementById('hunchbackLean').classList.add("notshowing")
+			watered ++
+			console.log('give water')
 
-	function giveWater(){
-		console.log('water audio');
-		let waterAudio = new Audio('audio/6_water.mp3');
-		waterAudio.play();
+			setTimeout(anotherAsk , 500)
+		}
 
-		setTimeout (showScene7, 18000)
+		function anotherAsk(){
+			document.getElementById('es-watering').classList.add("notshowing")
+			document.getElementById('hunchbackLean2').classList.remove("notshowing")
+		}
+
+		document.getElementById('hunchbackLean2').addEventListener('click', anotherWater)
+
+		function anotherWater() {
+			document.getElementById('es-watering').classList.remove("notshowing")
+			document.getElementById('hunchbackLean2').classList.add("notshowing")
+			watered ++
+			console.log('give water again')
+
+			setTimeout(stopWatering , 500)
+		}
+
+		function stopWatering(){
+			document.getElementById('es-watering').classList.add("notshowing")
+			document.getElementById('hunchbackLean2').classList.remove("notshowing")
+
+		}
+
+		setTimeout(checkWatered, 18000)
+
+	function checkWatered() {
+		if (watered > 2) {
+			showScene7
+		}
 	}
 
 	function showScene7() {
-		
 		console.log('holymusic audio');
 		let holyMusicAudio = new Audio('audio/3_holymusic.mp3');
 		holyMusicAudio.play();
 		console.log('move to scene3');
-		scene3.classList.remove("notshowing");
-		scene2.classList.add("notshowing");
+		scene7.classList.remove("notshowing");
+		scene6.classList.add("notshowing");
 
 		setTimeout(evilTalk, 12000)
 	}
@@ -260,6 +331,8 @@ function showScene2() {
 
 }
 
+/*
+
 kingOfFools.classList.add("shaking");
 
 let btn = document.querySelector(".button");
@@ -269,4 +342,4 @@ btn.addEventListener('click', showScene3);
 function showScene3() {
 
 	scene1.classList.add("notshowing");
-}
+}*/
