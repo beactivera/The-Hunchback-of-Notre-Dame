@@ -61,7 +61,7 @@ function showScene2() {
 		setTimeout(showScene3, 3000)
 	}
 
-	/*function showScene3() {
+	function showScene3() {
 		console.log('holymusic audio');
 		let holyMusicAudio = new Audio('audio/3_holymusic.mp3');
 		holyMusicAudio.play();
@@ -79,7 +79,7 @@ function showScene2() {
 
 		setTimeout(showScene4, 10000)
 
-	}*/
+	}
 
 
 	function showScene3(){

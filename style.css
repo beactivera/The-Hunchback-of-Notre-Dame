@@ -257,7 +257,6 @@ body{ width: 100vw;
 	bottom: 40%;
 	right: 25%;
 	width: 20%;
-	height: 20%;
 }
 
 .hunchbackBeat {
@@ -265,7 +264,6 @@ body{ width: 100vw;
 	bottom: 40%;
 	right: 35%;
 	width: 7.5%;
-	height: 10%;
 }
 
 .scene6{
@@ -282,7 +280,6 @@ body{ width: 100vw;
 	position:absolute;
 	top: 250px;
 	right: 35%;
-	width: 30%;
 	height: 40%
 }
 
@@ -290,7 +287,6 @@ body{ width: 100vw;
 	position:absolute;
 	top: 250px;
 	left: 30%;
-	width: 5%;
 	height: 20%;
 }
 
