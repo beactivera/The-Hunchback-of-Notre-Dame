@@ -82,8 +82,9 @@ body{ width: 100vw;
 .es-dancing {
 	position: absolute;
 	bottom: 0;
-	width: 100%;
-	left: 0;
+	left:10%;
+	width: auto;
+	height: auto;
 }
 
 .es-standing {
@@ -255,10 +256,9 @@ body{ width: 100vw;
 }
 
 .scene5 {
-	background-image: url('stage.svg');
-	position:absolute;
+	position:relative;
 	height: 100%;
-	width: auto;
+	width:auto;
 }
 
 .beating {
@@ -276,8 +276,7 @@ body{ width: 100vw;
 }
 
 .scene6{
-	background-image: url('stage.svg');
-	position:absolute;
+	position:relative;
 	height: 100%;
 	width: auto;
 }
