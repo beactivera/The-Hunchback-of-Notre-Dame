@@ -39,30 +39,7 @@ function showScene01() {
 function showScene2() {
 	scene2.classList.remove("notshowing");
 	scene01.classList.add("notshowing");
-<<<<<<< HEAD
-	
-	document.getElementById('es-dancing').classList.remove("notshowing");
-	document.getElementById('es-standing').classList.add("notshowing");
 
-	let danceClick = 0
-	esDancing.addEventListener('click', counterDanceClick)
-	
-	function counterDanceClick(){
-		if (danceClick == 0) {
-    danceClick++
-	
-    let hint2 = document.querySelector(".hint2");
-	hint2.classList.add("notshowing");
-	
-    let dancingAudio = new Audio('audio/2_dance.mp3') //selects document
-	dancingAudio.play() //starts music
-
-	
-	setTimeout(showScene02, 11000)
-	}
-	}
-	
-=======
 	console.log('showing scene 2')
 
 	console.log('danceClick is' + danceClick)
@@ -83,13 +60,13 @@ function startDancingAudio() {
 			dancingAudio.play() //starts music
 			document.getElementById('es-dancing').classList.remove("notshowing");
 			document.getElementById('es-standing').classList.add("notshowing");
+			//document.getElementsByClassName('hint2').classList.add("notshowing")
 
 
 			setTimeout(showScene02, 11000)
 		}
 }
 
->>>>>>> 5b3a03ef9ccdf0fda4e428306a9279a671084077
 
 
 function showScene02() {
@@ -105,78 +82,32 @@ function showScene3() {
 		scene3.classList.remove("notshowing");
 		scene02.classList.add("notshowing");
 
-		let hunchback_chasing =document.querySelector(".hunchback");
-<<<<<<< HEAD
-		let hunchback_standing =document.querySelector(".hunchback_standing");
-		let esmeralda_standing =document.querySelector(".esmeralda_standing");
-		
-		hunchback_chasing.classList.add("notshowing");
-		esmeralda.classList.add("notshowing");
-        
-=======
+		let screamAudio = new Audio('audio/4_newchase.mp3');
+		screamAudio.play();
 
->>>>>>> 5b3a03ef9ccdf0fda4e428306a9279a671084077
-		let screamClick = 0
-		hunchback_chasing.addEventListener('click', startScream)
-	
-		
-		function startScream(){
-<<<<<<< HEAD
-			
-		hunchback_standing.classList.add("notshowing");
-		hunchback_chasing.classList.remove("notshowing");
-		esmeralda_standing.classList.add("notshowing");
-		esmeralda.classList.remove("notshowing");
-			
-        if(screamClick == 0){
-		screamClick++;
-			
-		
-			
-		console.log('scream audio');
-		let screamNewAudio = new Audio('audio/7_murderscream.mp3');
-		screamNewAudio.play();
-		
+		/*setTimeout(scream, 500)
 
-			setTimeout(chasing, 6000)
-		}
-=======
-      if(screamClick == 0){
-				screamClick++;
+		function scream () {
+			let screamAudio = new Audio('audio/3_scream.mp3');
+			screamAudio.play();
+		}*/
 
-				console.log('scream audio');
-				let screamNewAudio = new Audio('audio/7_murderscream.mp3');
-				screamNewAudio.play();
-
-				setTimeout(chasing, 6000)
-			}
->>>>>>> 5b3a03ef9ccdf0fda4e428306a9279a671084077
-		}
-	
-		function chasing(){
-
-        console.log('chase audio');
-		let chaseAudio = new Audio('audio/4_chase.mp3');
-		chaseAudio.play();
-
-
-		setTimeout(showScene5, 11000)
-	}
-
+		setTimeout(showScene5, 3500)
 }
+
+
 
 function showScene5() {
 		scene5.classList.remove("notshowing");
 		scene3.classList.add("notshowing");
 
-
-       console.log('crowd audio');
+    console.log('crowd audio');
 		let crowdTalkAudio = new Audio('audio/5_crowdtalk.mp3');
 		crowdTalkAudio.play();
 
 
 		setTimeout(beating, 4530)
-	}
+}
 
 function beating() {
 		console.log('whip audio');
@@ -184,7 +115,7 @@ function beating() {
 		whipAudio.play();
 
 		setTimeout(showScene6, 13000)
-	}
+}
 
 
 function showScene6() {

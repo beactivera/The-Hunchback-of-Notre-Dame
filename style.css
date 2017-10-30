@@ -167,8 +167,9 @@ body{ width: 100vw;
 	background-image: url('people.png');
 }
 
-.scene3{
-	background-color: snow;
+.scene3 img{
+	width: 100%;
+	height: auto;
 }
 
 .cross{
@@ -250,7 +251,7 @@ body{ width: 100vw;
 	bottom: 14%;
 	left: 65%;
     height: 30%;
-	
+
 }
 
 .scene5 {
