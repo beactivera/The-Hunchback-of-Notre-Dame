@@ -255,13 +255,10 @@ body{ width: 100vw;
 }
 
 .scene5 {
+	background-image: url('stage.svg');
 	position:absolute;
-	bottom: 0%;
-	left: 0%;
-	width: 100%;
 	height: 100%;
-	background-size: 100% 100%;
-	background-image: url('beating-scene.svg');
+	width: auto;
 }
 
 .beating {
@@ -279,11 +276,10 @@ body{ width: 100vw;
 }
 
 .scene6{
-	background-image: url('water-scene.svg');
+	background-image: url('stage.svg');
 	position:absolute;
-	bottom: 0;
-	left: 0%;
-	width: 100%;
+	height: 100%;
+	width: auto;
 }
 
 .quasimodo {
