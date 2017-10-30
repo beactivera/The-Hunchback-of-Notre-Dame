@@ -7,7 +7,7 @@
 body{ width: 100vw;
       height: 100vh;
 	position: relative;
-	background-color: lightgrey;
+	background-color: darkgrey;
 }
 
 .notshowing {
@@ -283,11 +283,18 @@ body{ width: 100vw;
 	height: 40%
 }
 
-.es-watering {
-	position:absolute;
-	top: 250px;
+.hunchbackLean {
+	position: absolute;
+	top: 150px;
 	left: 30%;
-	height: 20%;
+	height: 25%;
+}
+
+.es-watering {
+	position: absolute;
+	top: 150px;
+	left: 30%;
+	height: 25%;
 }
 
 .scene7{
