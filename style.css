@@ -82,17 +82,17 @@ body{ width: 100vw;
 .es-dancing {
 	position: absolute;
 	bottom: 0;
-	left: 10%;
 	width: 100%;
+	left: 0;
 }
 
 .es-standing {
 	position: absolute;
 	bottom: 0;
 	left: 10%;
-	width: 20%;
-	height: 65%;
-	background-image: url('esmeralda-dwg.svg');
+	height: 75%;
+	width: 35%;
+	background-image: url('esmeralda-vector2-01.svg');
 }
 
 .hint2{
@@ -167,8 +167,9 @@ body{ width: 100vw;
 	background-image: url('people.png');
 }
 
-.scene3{
-	background-color: snow;
+.scene3 img{
+	width: 100%;
+	height: auto;
 }
 
 .cross{
@@ -224,20 +225,33 @@ body{ width: 100vw;
 	background-image:url('church.svg');
 }
 
+.hunchback_standing{
+	position: absolute;
+	bottom: 15%;
+	left: 30%;
+    height: 20%;
+}
+
 .hunchback{
 	position: absolute;
-	bottom: 0;
+	bottom: 15%;
 	left: 30%;
-	width: 20%;
-	height: 60%;
+    height: 20%;
+}
+
+.esmeralda_standing{
+	position: absolute;
+	bottom: 14%;
+	left: 65%;
+    height: 30%;
 }
 
 .esmeralda{
 	position: absolute;
-	bottom: 0;
-	left: 70%;
-	width: 20%;
-	height: 60%;
+	bottom: 14%;
+	left: 65%;
+    height: 30%;
+
 }
 
 .scene5 {
