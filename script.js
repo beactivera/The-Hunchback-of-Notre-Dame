@@ -53,6 +53,8 @@ let danceClick = 0
 
 function startDancingAudio() {
 		console.log('fun startDancingAudio executed')
+	 let hint2 = document.querySelector(".hint2");
+	hint2.style.display = 'none';
 		if (danceClick == 0) {
 			danceClick ++
 			console.log('danceClick is' + danceClick)
