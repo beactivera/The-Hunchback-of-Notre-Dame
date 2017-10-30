@@ -10,22 +10,32 @@ body{ width: 100vw;
 	background-color: lightgrey;
 }
 
-.notshowing{
+.notshowing {
 	display: none;
 }
 
-.scene{
+.scene {
 	width:100%;
 	height: 100%;
 	position: absolute;
 	text-align: center;
 }
 
+.scene01 img {
+	height: 100%;
+}
+
+.scene01 {
+	background-color: #3A3939;
+	width: 100%;
+	height: 100%;
+}
+
 .scene1{
 }
 
 .bgscene1 {
-	position: absolute;
+	position: relative;
 	bottom:0;
 	left:0;
 	width:100%;
@@ -33,42 +43,75 @@ body{ width: 100vw;
 	background-image: url('scene1.png');
 }
 
-.scene1 h1{
-
+.hint1{
+	position: absolute;
+	top:10%;
+	left:10%;
+	border-style: 5px solid black;
+	background-color: white;
 }
 
-.square{
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width:40%;
-	height: 15%;
-	z-index:10;
+.hint1 p{
+	padding: 10px;
+	margin: 10px;
+}
+
+.church_intro{
+	position:absolute;
+	bottom:0;
+	left:32%;
+	width:100%;
+	height: 100%;
+	background-image: url('church_intro.png');
+}
+
+.church_intro div{
+	position:absolute;
+	box-shadow: 0px 0px 47px 36px white;
+}
+
+.bells{
+	position:absolute;
+	bottom:0;
+	left:0;
 }
 
 .scene2 {
 }
 
-.es-dancing{
-	position: absolute;
-	bottom:0;
-	left:0;
-	width:15%;
-	height: 60%;
-	background-color: black; //change background to dancing gif
-}
-
-.esmeralda {
+.es-dancing {
 	position: absolute;
 	bottom: 0;
-	left: 30%;
+	left: 10%;
+	width: 20%;
+	height: 65%;
+	background-image: url('esmeralda-dwg.svg'); //change to gif
+}
+
+.es-standing {
+	position: absolute;
+	bottom: 0;
+	left: 10%;
 	width: 20%;
 	height: 65%;
 	background-image: url('esmeralda-dwg.svg');
-	display: none;
 }
 
-.dancing{
+.hint2{
+	position: absolute;
+	top:10%;
+	left:10%;
+	border-style: 5px solid black;
+	background-color: white;
+}
+
+.hint2 p{
+	padding: 10px;
+	margin: 10px;
+}
+
+
+/*.dancing{
 	animation: dance 4s linear forwards;
 }
 @keyframes dance{
@@ -105,7 +148,7 @@ body{ width: 100vw;
     75% {
         transform: translateX(10px)
     }
-}
+}*/
 
 .king{
 	position: absolute;
@@ -143,9 +186,8 @@ body{ width: 100vw;
 	position: absolute;
 	bottom: 0;
 	left: 30%;
-	width: 20%;
-	height: 65%;
-	background-image: url('esmeralda-dwg.svg');
+	width: 5%;
+	height: 10%;
 }
 
 .evil_jean{
@@ -157,9 +199,22 @@ body{ width: 100vw;
 	background-image: url('jean.svg');
 }
 
-.scene4 {
+.scene3{
 
 
+}
+
+.hint3{
+	position: absolute;
+	top:10%;
+	left:50%;
+	border-style: 5px solid black;
+	background-color: white;
+}
+
+.hint3 p{
+	padding: 10px;
+	margin: 10px;
 }
 
 .church{
@@ -179,6 +234,14 @@ body{ width: 100vw;
 	height: 60%;
 }
 
+.esmeralda{
+	position: absolute;
+	bottom: 0;
+	left: 70%;
+	width: 20%;
+	height: 60%;
+}
+
 .scene5 {
 	position:absolute;
 	bottom: 0%;
@@ -194,15 +257,13 @@ body{ width: 100vw;
 	bottom: 40%;
 	right: 25%;
 	width: 20%;
-	height: 20%;
 }
 
 .hunchbackBeat {
 	position: absolute;
 	bottom: 40%;
 	right: 35%;
-	width: 15%;
-	height: 15%;
+	width: 7.5%;
 }
 
 .scene6{
@@ -219,18 +280,14 @@ body{ width: 100vw;
 	position:absolute;
 	top: 250px;
 	right: 35%;
-	width: 30%;
 	height: 40%
 }
 
 .es-watering {
-	background-image: url('esmeralda-watering.png');
-	background-size: 30% 40%;
 	position:absolute;
 	top: 250px;
 	left: 30%;
-	width: 30%;
-	height: 40%;
+	height: 20%;
 }
 
 .scene7{
@@ -252,7 +309,7 @@ body{ width: 100vw;
 }
 
 .scene9{
-	background-image: /*fade out*/
+	background-image: url(scene-8-climax-hanging.svg);
 }
 
 .scene10{
