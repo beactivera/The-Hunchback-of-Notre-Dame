@@ -207,7 +207,7 @@ body{ width: 100vw;
 .hint3{
 	position: absolute;
 	top:10%;
-	left:10%;
+	left:50%;
 	border-style: 5px solid black;
 	background-color: white;
 }

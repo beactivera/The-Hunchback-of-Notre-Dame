@@ -63,42 +63,26 @@ function showScene2() {
 		setTimeout(showScene3, 3000)
 	}
 
-	function showScene3() {
-		console.log('holymusic audio');
-		let holyMusicAudio = new Audio('audio/3_holymusic.mp3');
-		holyMusicAudio.play();
-		console.log('move to scene3');
-		scene3.classList.remove("notshowing");
-		scene2.classList.add("notshowing");
-
-		setTimeout(evilTalk, 12000)
-	}
-
-	function evilTalk() {
-		console.log('eviltalk audio');
-		let evilTalkAudio = new Audio('audio/3_eviltalk.mp3');
-		evilTalkAudio.play();
-
-		setTimeout(showScene4, 10000)
-
-	}
-
 
 	function showScene3(){
 		scene3.classList.remove("notshowing");
 		scene02.classList.add("notshowing");
 
 		let hunchback_chasing =document.querySelector(".hunchback");
-
+        
+		let screamClick = 0
 		hunchback_chasing.addEventListener('click', startScream)
 
 		function startScream(){
-
+        if(screamClick == 0){
+			screamClick++;
+		
 			console.log('scream audio');
 		let screamNewAudio = new Audio('audio/7_murderscream.mp3');
 		screamNewAudio.play();
 
 			setTimeout(chasing, 6000)
+		}
 		}
 
 		function chasing(){
@@ -162,7 +146,26 @@ function showScene2() {
 	}
 
 	function showScene7() {
-		console.log('dance audio');
+		
+		console.log('holymusic audio');
+		let holyMusicAudio = new Audio('audio/3_holymusic.mp3');
+		holyMusicAudio.play();
+		console.log('move to scene3');
+		scene3.classList.remove("notshowing");
+		scene2.classList.add("notshowing");
+
+		setTimeout(evilTalk, 12000)
+	}
+
+	function evilTalk() {
+		console.log('eviltalk audio');
+		let evilTalkAudio = new Audio('audio/3_eviltalk.mp3');
+		evilTalkAudio.play();
+
+		setTimeout(showScene8, 10000)
+
+	}
+/*		console.log('dance audio');
 		let danceAudio = new Audio('audio/7_dance.mp3');
 		danceAudio.play();
 		console.log('move to scene7');
@@ -186,7 +189,7 @@ function showScene2() {
 		screamAudio.play();
 
 		setTimeout (showScene8, 6000)
-	}
+	}*/
 
 
 	function showScene8() {
