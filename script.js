@@ -69,14 +69,14 @@ function showScene2() {
 		scene02.classList.add("notshowing");
 
 		let hunchback_chasing =document.querySelector(".hunchback");
-        
+
 		let screamClick = 0
 		hunchback_chasing.addEventListener('click', startScream)
 
 		function startScream(){
         if(screamClick == 0){
 			screamClick++;
-		
+
 			console.log('scream audio');
 		let screamNewAudio = new Audio('audio/7_murderscream.mp3');
 		screamNewAudio.play();
@@ -118,41 +118,66 @@ function showScene2() {
 		setTimeout(showScene6, 13000)
 	}
 
+let watered = 0;
+
 	function showScene6() {
 		console.log('laugh audio');
-		let laughAudio = new Audio('audio/6_laugh.mp3');
-		laughAudio.play();
+		let waterAudio = new Audio('audio/6_water.mp3');
+		waterAudio.play();
 		console.log('move to scene6');
 		scene6.classList.remove("notshowing");
 		scene5.classList.add("notshowing");
 
-		setTimeout( hbScream, 12000)
+
+		document.getElementById('hunchbackLean').addEventListener('click', giveWaterNow)
+
+		function giveWaterNow() {
+			document.getElementById('es-watering').classList.remove("notshowing")
+			document.getElementById('hunchbackLean').classList.add("notshowing")
+			watered ++
+			console.log('give water')
+
+			setTimeout(anotherAsk , 500)
+		}
+
+		function anotherAsk(){
+			document.getElementById('es-watering').classList.add("notshowing")
+			document.getElementById('hunchbackLean2').classList.remove("notshowing")
+		}
+
+		document.getElementById('hunchbackLean2').addEventListener('click', anotherWater)
+
+		function anotherWater() {
+			document.getElementById('es-watering').classList.remove("notshowing")
+			document.getElementById('hunchbackLean2').classList.add("notshowing")
+			watered ++
+			console.log('give water again')
+
+			setTimeout(stopWatering , 500)
+		}
+
+		function stopWatering(){
+			document.getElementById('es-watering').classList.add("notshowing")
+			document.getElementById('hunchbackLean2').classList.remove("notshowing")
+
+		}
+
+		setTimeout(checkWatered, 18000)
 	}
 
-	function hbScream (){
-		console.log('scream audio');
-		let hbScreamAudio = new Audio('audio/6_hbscream.mp3');
-		hbScreamAudio.play();
-
-		setTimeout( giveWater, 14000)
-	}
-
-	function giveWater(){
-		console.log('water audio');
-		let waterAudio = new Audio('audio/6_water.mp3');
-		waterAudio.play();
-
-		setTimeout (showScene7, 18000)
+	function checkWatered() {
+		if (watered > 2) {
+			showScene7
+		}
 	}
 
 	function showScene7() {
-		
 		console.log('holymusic audio');
 		let holyMusicAudio = new Audio('audio/3_holymusic.mp3');
 		holyMusicAudio.play();
 		console.log('move to scene3');
-		scene3.classList.remove("notshowing");
-		scene2.classList.add("notshowing");
+		scene7.classList.remove("notshowing");
+		scene6.classList.add("notshowing");
 
 		setTimeout(evilTalk, 12000)
 	}
