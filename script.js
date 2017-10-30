@@ -41,16 +41,18 @@ function showScene2() {
 	document.getElementById('es-dancing').classList.remove("notshowing");
 	document.getElementById('es-standing').classList.add("notshowing");
 
-
+	let danceClick = 0
 	esDancing.addEventListener('click', startDancingAudio)
 
-	function startDancingAudio(){
+	function startDancingAudio() {
+	if (danceClick == 0) {
+	danceClick ++
 	let dancingAudio = new Audio('audio/2_dance.mp3') //selects document
 	dancingAudio.play() //starts music
 
 
 	setTimeout(showScene02, 11000)
-
+	}
 	}
 
 	function showScene02(){
