@@ -331,10 +331,9 @@ body{ width: 100vw;
 }
 
 .credits{
-	position:absolute;
+	position: relative;
 	justify-content: center;
 	margin-top: 20%;
-	left: 30%;
 	display: block;
 }
 
