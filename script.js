@@ -21,7 +21,7 @@ let kingOfFools = document.querySelector(".kingoffools");
 let shakingFool = document.querySelector(".shakingfool");
 let credits = document.querySelector(".credits");
 let watered = 0;
-
+let wateredChecked = 0;
 
 
 
@@ -82,6 +82,7 @@ function showScene02() { //written story 1
 
 
 function showScene3() { //chaseing
+		setTimeout(delayAnimation3, 1800)
 		scene3.classList.remove("notshowing");
 		scene02.classList.add("notshowing");
 
@@ -95,9 +96,12 @@ function showScene3() { //chaseing
 			screamAudio.play();
 		}*/
 
-		setTimeout(showScene5, 3500)
+		setTimeout(showScene5, 5300)
 }
 
+function delayAnimation3() {
+	chaseAnimation.src = 'animations/Chasing-the-BITCH.gif'
+}
 
 
 function showScene5() { //beaten
@@ -142,11 +146,16 @@ function showScene6() { //watering
 			document.getElementById('es-watering').classList.add("notshowing")
 			document.getElementById('hunchbackLean2').classList.remove("notshowing")
 			setTimeout(leanUp2, 250)
+			if (wateredChecked == 0) {
+				let askWater = new Audio('audio/2water.mp3');
+				askWater.play();
+			}
 		}
 
 		function leanUp2() {
 			document.getElementById('hunchbackLean2S').classList.remove("notshowing")
 			document.getElementById('hunchbackLean2').classList.add("notshowing")
+
 		}
 
 		document.getElementById('hunchbackLean2S').addEventListener('click', anotherWater)
@@ -169,13 +178,16 @@ function showScene6() { //watering
 		setTimeout(checkWatered, 9000)
 
 	function checkWatered() {
+		wateredChecked ++
 		console.log('check water status quasimodo')
 		if (watered >= 2) {
 			setTimeout(showScene7, 1000)
 			console.log('polite player tho')
 		} else {
-			setTimeout (checkWatered, 500)
+			setTimeout (checkWatered,3000)
 			console.log('not enough water')
+			let askWater2 = new Audio('audio/1water.mp3');
+			askWater2.play();
 		}
 	}
 
@@ -232,7 +244,7 @@ function showScene6() { //watering
 		dramaticMusicAudio.play();
 		console.log('move to scene8');
 		scene8.classList.remove("notshowing");
-		scene7.classList.add("notshowing");
+		scene07.classList.add("notshowing");
 
 		setTimeout(showScene9, 7000)
 	}
