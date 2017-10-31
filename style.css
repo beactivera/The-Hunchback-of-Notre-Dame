@@ -71,8 +71,10 @@ body{ width: 100vw;
 }
 
 .bells{
-	position:absolute;
-	width:auto;
+	position:relative;
+	justify-content: center;
+	left:0;
+	bottom: 0;
 	height: 100%;
 }
 
