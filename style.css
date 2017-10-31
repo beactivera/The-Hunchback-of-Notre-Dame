@@ -170,6 +170,11 @@ body{ width: 100vw;
 	z-index: 3;
 }
 
+.scene02 {
+	background-image: url('text_first.png');
+	background-size: 100% 100%
+}
+
 .scene3 {
 	background-color: #1D1D1D;
 }
@@ -307,9 +312,11 @@ body{ width: 100vw;
 	height: 25%;
 }
 
-.scene7{
-
+.scene07{
+  	background-image: url('text_second.png');
+		background-size: 100% 100%;
 }
+
 
 .party{
 	position:absolute;

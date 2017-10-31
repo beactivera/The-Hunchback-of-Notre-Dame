@@ -34,7 +34,7 @@ function showScene01() { //bells
 	let bellsAudio = new Audio('audio/1_bells.mp3') //selects document
 	bellsAudio.play() //starts music
 
-	setTimeout(showScene2, 15000)
+	setTimeout(showScene2, 7000)
 }
 
 function showScene2() { // dancing
