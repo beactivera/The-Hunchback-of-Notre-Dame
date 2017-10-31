@@ -319,7 +319,9 @@ body{ width: 100vw;
 }
 
 .scene7, .scene9 {
-	background-image: url('inside_the_church.svg')
+	background-image: url('inside_the_church.svg');
+	background-position: right;
+	background-color: #424141;
 }
 
 
