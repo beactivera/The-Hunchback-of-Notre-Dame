@@ -34,7 +34,7 @@ function showScene01() { //bells
 	let bellsAudio = new Audio('audio/1_bells.mp3') //selects document
 	bellsAudio.play() //starts music
 
-	setTimeout(showScene2, 15000)
+	setTimeout(showScene2, 7000)
 }
 
 function showScene2() { // dancing
@@ -85,7 +85,7 @@ function showScene3() { //chaseing
 		scene3.classList.remove("notshowing");
 		scene02.classList.add("notshowing");
 
-		let screamAudio = new Audio('audio/3_newchase.mp3');
+		let screamAudio = new Audio('audio/3_newchase_2.mp3');
 		screamAudio.play();
 
 		/*setTimeout(scream, 500)
