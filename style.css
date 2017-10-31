@@ -84,7 +84,7 @@ p{
 
 .es-dancing {
 	position: absolute;
-	bottom: 85%;
+	bottom: 25%;
 	width: 50%;
 	height: 80%;
 }
@@ -202,6 +202,7 @@ p{
 	left: 30%;
 	width: 5%;
 	height: 10%;
+	z-index: 3;
 }
 
 .evil_jean{
@@ -306,6 +307,14 @@ p{
 	top: 150px;
 	left: 30%;
 	height: 25%;
+}
+
+#hunchbackLeanS{
+	filter: drop-shadow(8px 8px 8px white);
+}
+
+#hunchbackLean2S{
+	filter: drop-shadow(8px 8px 8px white);
 }
 
 .es-watering {
