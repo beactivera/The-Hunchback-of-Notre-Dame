@@ -85,7 +85,7 @@ function showScene3() { //chaseing
 		scene3.classList.remove("notshowing");
 		scene02.classList.add("notshowing");
 
-		let screamAudio = new Audio('audio/3_newchase.mp3');
+		let screamAudio = new Audio('audio/3_newchase_2.mp3');
 		screamAudio.play();
 
 		/*setTimeout(scream, 500)
