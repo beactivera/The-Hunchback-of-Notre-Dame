@@ -167,7 +167,7 @@ body{ width: 100vw;
 }
 
 .scene3 {
-	background-color: #737373;
+	background-color: #1D1D1D;
 }
 
 .scene3 img{
@@ -199,11 +199,6 @@ body{ width: 100vw;
 	width: 20%;
 	height: 65%;
 	background-image: url('jean.svg');
-}
-
-.scene3{
-
-
 }
 
 .hint3{
@@ -261,6 +256,7 @@ body{ width: 100vw;
 	position:relative;
 	height: 100%;
 	width:auto;
+	background-color:#B7B7B7;
 }
 
 .beating {
@@ -281,6 +277,7 @@ body{ width: 100vw;
 	position:relative;
 	height: 100%;
 	width: auto;
+	background-color: #B7B7B7;
 }
 
 .quasimodo {
@@ -335,7 +332,7 @@ body{ width: 100vw;
 .credits{
 	position:absolute;
 	justify-content: center;
-	top: 20%;
+	margin-top: 20%;
 	left: 30%;
 	display: block;
 }
