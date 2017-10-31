@@ -171,7 +171,7 @@ function showScene6() { //watering
 	function checkWatered() {
 		console.log('check water status quasimodo')
 		if (watered >= 2) {
-			setTimeout(showScene7, 500)
+			setTimeout(showScene7, 1000)
 			console.log('polite player tho')
 		} else {
 			setTimeout (checkWatered, 500)
