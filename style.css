@@ -84,9 +84,9 @@ body{ width: 100vw;
 
 .es-dancing {
 	position: relative;
-	bottom: 15%;
+	bottom: 5%;
 	width: 50%;
-	height: 80%;
+	height: 70%;
 }
 
 .es-standing {
@@ -96,6 +96,7 @@ body{ width: 100vw;
 	height: 55%;
 	width: 35%;
 	background-image: url('esmeralda-vector2-01.svg');
+	z-index:4;
 }
 
 .hint2{
@@ -156,17 +157,18 @@ body{ width: 100vw;
 	bottom: 15%;
 	right: 0;
 	width: 13%;
-	height: 40%;
+	height: 30%;
 	background-image:url('king.svg');
 
 }
 
 .audience {
 	position:absolute;
-	left:30%;
-	bottom:-15%;
-	width: 35%;
-	height: 80%%;  /* leave in this way, it works !*/
+	left:10%;
+	bottom:-30%;
+	width: 80%;
+	height: 80%;
+	z-index: 3;
 }
 
 .scene3 {
