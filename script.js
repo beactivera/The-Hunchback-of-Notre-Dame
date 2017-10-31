@@ -82,6 +82,7 @@ function showScene02() { //written story 1
 
 
 function showScene3() { //chaseing
+		setTimeout(delayAnimation3, 1800)
 		scene3.classList.remove("notshowing");
 		scene02.classList.add("notshowing");
 
@@ -95,9 +96,12 @@ function showScene3() { //chaseing
 			screamAudio.play();
 		}*/
 
-		setTimeout(showScene5, 3500)
+		setTimeout(showScene5, 5300)
 }
 
+function delayAnimation3() {
+	chaseAnimation.src = 'animations/Chasing-the-BITCH.gif'
+}
 
 
 function showScene5() { //beaten
