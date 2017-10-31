@@ -7,6 +7,7 @@ let scene4 = document.querySelector(".scene4");
 let scene5 = document.querySelector(".scene5");
 let scene6 = document.querySelector(".scene6");
 let scene7 = document.querySelector(".scene7");
+let scene07 = document.querySelector(".scene07")
 let scene8 = document.querySelector(".scene8");
 let scene9 = document.querySelector(".scene9");
 let scene10 = document.querySelector(".scene10");
@@ -24,9 +25,9 @@ let watered = 0;
 
 
 
-church_intro.addEventListener('click', showScene01);
+church_intro.addEventListener('click', showScene01); //intro
 
-function showScene01() {
+function showScene01() { //bells
 	scene01.classList.remove("notshowing");
 	scene1.classList.add("notshowing");
 
@@ -36,7 +37,7 @@ function showScene01() {
 	setTimeout(showScene2, 15000)
 }
 
-function showScene2() {
+function showScene2() { // dancing
 	scene2.classList.remove("notshowing");
 	scene01.classList.add("notshowing");
 
@@ -53,8 +54,6 @@ let danceClick = 0
 
 function startDancingAudio() {
 		console.log('fun startDancingAudio executed')
-	 let hint2 = document.querySelector(".hint2");
-	hint2.style.display = 'none';
 		if (danceClick == 0) {
 			danceClick ++
 			console.log('danceClick is' + danceClick)
@@ -71,20 +70,22 @@ function startDancingAudio() {
 
 
 
-function showScene02() {
+function showScene02() { //written story 1
 
 		scene02.classList.remove("notshowing");
 		scene2.classList.add("notshowing");
+		let written1Audio = new Audio ('audio/02_written.mp3');
+		written1Audio.play();
 
-		setTimeout(showScene3, 3000)
+		setTimeout(showScene3, 13000)
 }
 
 
-function showScene3() {
+function showScene3() { //chaseing
 		scene3.classList.remove("notshowing");
 		scene02.classList.add("notshowing");
 
-		let screamAudio = new Audio('audio/4_newchase.mp3');
+		let screamAudio = new Audio('audio/3_newchase.mp3');
 		screamAudio.play();
 
 		/*setTimeout(scream, 500)
@@ -99,19 +100,10 @@ function showScene3() {
 
 
 
-function showScene5() {
+function showScene5() { //beaten
 		scene5.classList.remove("notshowing");
 		scene3.classList.add("notshowing");
 
-    console.log('crowd audio');
-		let crowdTalkAudio = new Audio('audio/5_crowdtalk.mp3');
-		crowdTalkAudio.play();
-
-
-		setTimeout(beating, 4530)
-}
-
-function beating() {
 		console.log('whip audio');
 		let whipAudio = new Audio('audio/5_whip.mp3');
 		whipAudio.play();
@@ -120,7 +112,7 @@ function beating() {
 }
 
 
-function showScene6() {
+function showScene6() { //watering
 		console.log('laugh audio');
 		let waterAudio = new Audio('audio/6_water.mp3');
 		waterAudio.play();
@@ -128,28 +120,40 @@ function showScene6() {
 		scene6.classList.remove("notshowing");
 		scene5.classList.add("notshowing");
 
+		setTimeout (leanUp, 250)
 
-		document.getElementById('hunchbackLean').addEventListener('click', giveWaterNow)
+		function leanUp() {
+			document.getElementById('hunchbackLeanS').classList.remove("notshowing")
+			document.getElementById('hunchbackLean').classList.add("notshowing")
+		}
+
+		document.getElementById('hunchbackLeanS').addEventListener('click', giveWaterNow)
 
 		function giveWaterNow() {
 			document.getElementById('es-watering').classList.remove("notshowing")
-			document.getElementById('hunchbackLean').classList.add("notshowing")
+			document.getElementById('hunchbackLeanS').classList.add("notshowing")
 			watered ++
 			console.log('give water')
 
-			setTimeout(anotherAsk , 500)
+			setTimeout(anotherAsk , 250)
 		}
 
 		function anotherAsk(){
 			document.getElementById('es-watering').classList.add("notshowing")
 			document.getElementById('hunchbackLean2').classList.remove("notshowing")
+			setTimeout(leanUp2, 250)
 		}
 
-		document.getElementById('hunchbackLean2').addEventListener('click', anotherWater)
+		function leanUp2() {
+			document.getElementById('hunchbackLean2S').classList.remove("notshowing")
+			document.getElementById('hunchbackLean2').classList.add("notshowing")
+		}
+
+		document.getElementById('hunchbackLean2S').addEventListener('click', anotherWater)
 
 		function anotherWater() {
 			document.getElementById('es-watering').classList.remove("notshowing")
-			document.getElementById('hunchbackLean2').classList.add("notshowing")
+			document.getElementById('hunchbackLean2S').classList.add("notshowing")
 			watered ++
 			console.log('give water again')
 
@@ -158,35 +162,32 @@ function showScene6() {
 
 		function stopWatering(){
 			document.getElementById('es-watering').classList.add("notshowing")
-			document.getElementById('hunchbackLean2').classList.remove("notshowing")
+			document.getElementById('hunchbackLean2S').classList.remove("notshowing")
 
 		}
 
-		setTimeout(checkWatered, 18000)
+		setTimeout(checkWatered, 9000)
 
 	function checkWatered() {
-		if (watered > 2) {
-			showScene7
+		console.log('check water status quasimodo')
+		if (watered >= 2) {
+			setTimeout(showScene7, 1000)
+			console.log('polite player tho')
+		} else {
+			setTimeout (checkWatered, 500)
+			console.log('not enough water')
 		}
 	}
 
-	function showScene7() {
+	function showScene7() { //praying
 		console.log('holymusic audio');
-		let holyMusicAudio = new Audio('audio/3_holymusic.mp3');
+		let holyMusicAudio = new Audio('audio/7_eviltalk.mp3');
 		holyMusicAudio.play();
 		console.log('move to scene3');
 		scene7.classList.remove("notshowing");
 		scene6.classList.add("notshowing");
 
-		setTimeout(evilTalk, 12000)
-	}
-
-	function evilTalk() {
-		console.log('eviltalk audio');
-		let evilTalkAudio = new Audio('audio/3_eviltalk.mp3');
-		evilTalkAudio.play();
-
-		setTimeout(showScene8, 10000)
+		setTimeout(showScene07, 10000)
 
 	}
 /*		console.log('dance audio');
@@ -215,38 +216,43 @@ function showScene6() {
 		setTimeout (showScene8, 6000)
 	}*/
 
+	function showScene07() { //Written story 2
+		scene07.classList.remove("notshowing");
+		scene7.classList.add("notshowing");
+		let written2Audio = new Audio ('audio/07_written.mp3');
+		written2Audio.play();
 
-	function showScene8() {
+		setTimeout(showScene8, 11000)
+
+	}
+
+	function showScene8() { //point of hanging
 		console.log('drama music audio');
-		let dramaticMusicAudio = new Audio ('audio/8_dramaticmusic.mp3');
+		let dramaticMusicAudio = new Audio ('audio/8_dramatic.mp3');
 		dramaticMusicAudio.play();
 		console.log('move to scene8');
 		scene8.classList.remove("notshowing");
 		scene7.classList.add("notshowing");
 
-		setTimeout(showScene9, 29000)
+		setTimeout(showScene9, 7000)
 	}
 
-	function showScene9() {
+	function showScene9() { //crying in church
 		console.log('innocent audio');
-		let innocentAudio = new Audio ('audio/8_innocent.mp3');
+		let innocentAudio = new Audio ('audio/9and10_cryingcredits.mp3');
 		innocentAudio.play();
 		console.log('move to scene9');
 		scene9.classList.remove("notshowing");
 		scene8.classList.add("notshowing");
 
-		setTimeout( theEnd, 5000)
+		setTimeout( theEnd, 8000)
 	}
 
-	function theEnd(){
-		console.log('holy audio');
-		let holyAudio = new Audio ('audio/8_holymusic.mp3');
-		holyAudio.play();
-
-		setTimeout(showScene10,31000)  // too long?
+	function theEnd(){ //fade out
+		setTimeout(showScene10, 2000)
 	}
 
-	function showScene10() {
+	function showScene10() { //credits
 		console.log('move to scene10');
 		scene10.classList.remove("notshowing");
 		credits.classList.remove("notshowing");

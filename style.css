@@ -26,7 +26,7 @@ body{ width: 100vw;
 }
 
 .scene01 {
-	background-color: #3A3939;
+	background-color: #424141;
 	width: 100%;
 	height: 100%;
 }
@@ -62,7 +62,6 @@ body{ width: 100vw;
 	left:32%;
 	width:100%;
 	height: 100%;
-	background-image: url('church_intro.png');
 }
 
 .church_intro div{
@@ -71,19 +70,22 @@ body{ width: 100vw;
 }
 
 .bells{
-	position:absolute;
-	bottom:0;
+	position:relative;
+	justify-content: center;
 	left:0;
+	bottom: 0;
+	height: 100%;
 }
+
 
 .scene2 {
 }
 
 .es-dancing {
 	position: relative;
-	bottom: 15%;
+	bottom: 5%;
 	width: 50%;
-	height: 80%;
+	height: 70%;
 }
 
 .es-standing {
@@ -93,6 +95,7 @@ body{ width: 100vw;
 	height: 55%;
 	width: 35%;
 	background-image: url('esmeralda-vector2-01.svg');
+	z-index:4;
 }
 
 .hint2{
@@ -153,22 +156,27 @@ body{ width: 100vw;
 	bottom: 15%;
 	right: 0;
 	width: 13%;
-	height: 40%;
+	height: 30%;
 	background-image:url('king.svg');
 
 }
 
 .audience {
 	position:absolute;
-	left:30%;
-	bottom:-15%;
-	width: 35%;
-	height: 80%%;  /* leave in this way, it works !*/
+	left:10%;
+	bottom:-30%;
+	width: 80%;
+	height: 80%;
+	z-index: 3;
+}
+
+.scene3 {
+	background-color: #1D1D1D;
 }
 
 .scene3 img{
-	width: 100%;
-	height: auto;
+	height: 100%;
+	width: auto;
 }
 
 .cross{
@@ -195,11 +203,6 @@ body{ width: 100vw;
 	width: 20%;
 	height: 65%;
 	background-image: url('jean.svg');
-}
-
-.scene3{
-
-
 }
 
 .hint3{
@@ -257,6 +260,7 @@ body{ width: 100vw;
 	position:relative;
 	height: 100%;
 	width:auto;
+	background-color:#B7B7B7;
 }
 
 .beating {
@@ -277,6 +281,7 @@ body{ width: 100vw;
 	position:relative;
 	height: 100%;
 	width: auto;
+	background-color: #B7B7B7;
 }
 
 .quasimodo {
@@ -321,7 +326,6 @@ body{ width: 100vw;
 }
 
 .scene9{
-	background-image: url(scene-8-climax-hanging.svg);
 }
 
 .scene10{
@@ -330,10 +334,9 @@ body{ width: 100vw;
 }
 
 .credits{
-	position:absolute;
+	position: relative;
 	justify-content: center;
-	top: 20%;
-	left: 30%;
+	margin-top: 20%;
 	display: block;
 }
 
