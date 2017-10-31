@@ -120,28 +120,40 @@ function showScene6() { //watering
 		scene6.classList.remove("notshowing");
 		scene5.classList.add("notshowing");
 
+		setTimeout (leanUp, 250)
 
-		document.getElementById('hunchbackLean').addEventListener('click', giveWaterNow)
+		function leanUp() {
+			document.getElementById('hunchbackLeanS').classList.remove("notshowing")
+			document.getElementById('hunchbackLean').classList.add("notshowing")
+		}
+
+		document.getElementById('hunchbackLeanS').addEventListener('click', giveWaterNow)
 
 		function giveWaterNow() {
 			document.getElementById('es-watering').classList.remove("notshowing")
-			document.getElementById('hunchbackLean').classList.add("notshowing")
+			document.getElementById('hunchbackLeanS').classList.add("notshowing")
 			watered ++
 			console.log('give water')
 
-			setTimeout(anotherAsk , 500)
+			setTimeout(anotherAsk , 250)
 		}
 
 		function anotherAsk(){
 			document.getElementById('es-watering').classList.add("notshowing")
 			document.getElementById('hunchbackLean2').classList.remove("notshowing")
+			setTimeout(leanUp2, 250)
 		}
 
-		document.getElementById('hunchbackLean2').addEventListener('click', anotherWater)
+		function leanUp2() {
+			document.getElementById('hunchbackLean2S').classList.remove("notshowing")
+			document.getElementById('hunchbackLean2').classList.add("notshowing")
+		}
+
+		document.getElementById('hunchbackLean2S').addEventListener('click', anotherWater)
 
 		function anotherWater() {
 			document.getElementById('es-watering').classList.remove("notshowing")
-			document.getElementById('hunchbackLean2').classList.add("notshowing")
+			document.getElementById('hunchbackLean2S').classList.add("notshowing")
 			watered ++
 			console.log('give water again')
 
@@ -150,7 +162,7 @@ function showScene6() { //watering
 
 		function stopWatering(){
 			document.getElementById('es-watering').classList.add("notshowing")
-			document.getElementById('hunchbackLean2').classList.remove("notshowing")
+			document.getElementById('hunchbackLean2S').classList.remove("notshowing")
 
 		}
 
