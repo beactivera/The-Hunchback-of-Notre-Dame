@@ -83,16 +83,16 @@ body{ width: 100vw;
 
 .es-dancing {
 	position: relative;
-	bottom: 5%;
+	bottom: 15%;
 	width: 50%;
-	height: 70%;
+	height: 80%;
 }
 
 .es-standing {
 	position: absolute;
 	bottom: 15%;
 	left: 10%;
-	height: 55%;
+	height: 70%;
 	width: 35%;
 	background-image: url('esmeralda-vector2-01.svg');
 	z-index:4;
