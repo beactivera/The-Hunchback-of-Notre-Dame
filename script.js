@@ -54,8 +54,6 @@ let danceClick = 0
 
 function startDancingAudio() {
 		console.log('fun startDancingAudio executed')
-	 let hint2 = document.querySelector(".hint2");
-	hint2.style.display = 'none';
 		if (danceClick == 0) {
 			danceClick ++
 			console.log('danceClick is' + danceClick)
@@ -239,7 +237,7 @@ function showScene6() { //watering
 	}
 
 	function theEnd(){ //fade out
-		setTimeout(showScene10, 2000)  // too long?
+		setTimeout(showScene10, 2000)
 	}
 
 	function showScene10() { //credits
