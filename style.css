@@ -312,9 +312,13 @@ body{ width: 100vw;
 	height: 25%;
 }
 
-.scene07{
+.scene07 {
   	background-image: url('text_second.png');
 		background-size: 100% 100%;
+}
+
+.scene7, .scene9 {
+	background-image: url('inside_the_church.svg')
 }
 
 
