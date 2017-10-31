@@ -72,9 +72,10 @@ body{ width: 100vw;
 
 .bells{
 	position:absolute;
-	bottom:0;
-	left:0;
+	width:auto;
+	height: 100%;
 }
+
 
 .scene2 {
 }
