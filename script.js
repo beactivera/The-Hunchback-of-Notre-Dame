@@ -65,15 +65,21 @@ function startDancingAudio() {
 
 
 			setTimeout(loveScene, 7000)
-	
+
 }
 }
 function loveScene(){
 	console.log('on the screen user see esmeralda & phoebus');
 	audience.classList.add("notshowing");
 	document.getElementById("king").classList.add("notshowing");
-	
-	
+	document.getElementById("phoebus").classList.add("notshowing")
+	document.getElementById("phoebusHorse").classList.remove("notshowing")
+	document.getElementById("phoebusHorse").classList.add("phoebusHorseR")
+
+
+
+
+
 	setTimeout(showScene02,4000)
 }
 

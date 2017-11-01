@@ -2,6 +2,7 @@
 	margin:0;
 	padding: 0;
 	background-repeat: no-repeat;
+	overflow: hidden;
 }
 
 body{ width: 100vw;
@@ -110,8 +111,18 @@ body{ width: 100vw;
 	height:50%;
 	width:auto;
 	z-index: 1;
-	
 }
+
+.phoebusHorseR {
+	animation: riding 4s linear;
+}
+
+@keyframes riding  {
+	to {
+	transform: translateX(40%)
+	}
+}
+
 /*.dancing{
 	animation: dance 4s linear forwards;
 }
@@ -274,7 +285,7 @@ body{ width: 100vw;
 	top: 60px;
 	left: 20%;
 	height: 50%;
-	filter: drop-shadow(8px 8px 8px white);	
+	filter: drop-shadow(8px 8px 8px white);
 }
 
 .beating{
@@ -385,6 +396,3 @@ body{ width: 100vw;
 .credits h1 p{
 	color:white;
 }
-
-
-
