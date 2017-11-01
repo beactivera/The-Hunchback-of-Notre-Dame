@@ -11,13 +11,11 @@
 
 		<section class="scene scene1">
 		   <div class="bgscene1">
-		   <div class="hint1">
-		   	<p>
-		   		Click the church!
+		   	<p class="hint1 notshowing" id="hint1">
+		   		Click the church or press enter to start
 		   	</p>
-		   </div>
 			<!-- <h1>title</h1>   the user have to figure out by theirself what is the title of the movie is -->
-			<div class="church_intro"></div>
+			<div class="church_intro clickable"></div>
 			</div>
 		</section>
 
@@ -26,63 +24,71 @@
 		</section>
 
 		<section class="notshowing scene scene2">
-		<div class="hint2">
-			<p><b>
-				Click the girl!
-				</b></p>
-		</div>
-			<img class="audience" src="audience.svg">
-			<div class="phoebus"></div>
-			<div class="es-standing" id="es-standing"></div>
+		    <img class="scene2" src="scene2_bg.svg">
+			<img class=" audience" src="audience.svg">
+			<img class="phoebus" id="phoebus" src="phoebus-and-the-horse.svg">
+			<img class="notshowing phoebusHorse" id="phoebusHorse" src="phoebus-heart-eyes.gif">
+			<div class="es-standing clickable" id="es-standing"></div>
 			<img class="es-dancing notshowing" id="es-dancing" src="animations/dance.gif"/>
 
 			<!-- add phoebus to the css and js
 			animate other things like audience and king - still improve
 			add background
 			add esmaralda dancing in css -->
-			<div class="king"></div>
+			<img id="king" class="king" src="the-king-on-his-chair.svg">
 		</section>
 
 		<section class="notshowing scene scene02">
-			<div class="writtenStory1">Written story.....</div>
+			<div class="writtenStory1"></div>
 		</section>
 
 		<section class="notshowing scene scene3">
-		<img src="animations/Chasing-the-BITCH.gif" />
+		<img src="animations/Chasing-the-BITCH.gif" class="notshowing">
+		<img src="Chasing-the-BITCH.png" id="chaseAnimation"/>
 		</section>
 
 		<section class="notshowing scene scene5">
 		<img class="scene5" src="stage.svg">
-			<img class="beating" src="whiping.gif" alt="whiping">
-			<img class="hunchbackBeat" src="animations/quasimode-kneeling.gif"/>
+		<!--	<img class="beating" src="whiping.gif" alt="whiping">
+			<img class="hunchbackBeat" src="animations/quasimode-kneeling.gif"/> -->
+
+
+		<img id="beat-scene" class="beat-scene clickable" src="whiping.png">
+		<img id="beating" class="beating" src="animations/whiping1.gif">
+		<img class=" audience" src="audience.svg">
+		<img id="king" class="king" src="the-king-on-his-chair.svg">
 		</section>
 
 		<section class="notshowing scene scene6">
 		<img class="scene6" src="stage.svg">
-			<img id="hunchbackLean" class="hunchbackLean " src="animations/water-scene-lean-back.gif"/>
-			<img id="hunchbackLeanS" class="hunchbackLean notshowing" src="water-scene-lean-back.png"/>
+			<img id="hunchbackLean" class="hunchbackLean" src="animations/water-scene-lean-back.gif"/>
+			<img id="hunchbackLeanS" class="hunchbackLean notshowing clickable" src="water-scene-lean-back.png"/>
 			<img id="es-watering" src="animations/water-scene-arm-ext.gif" class="es-watering notshowing"/>
 		<img id="hunchbackLean2" class="hunchbackLean notshowing" src="animations/water-scene-lean-back.gif"/>
-		<img id="hunchbackLean2S" class="hunchbackLean notshowing" src="water-scene-lean-back.png">
+		<img id="hunchbackLean2S" class="hunchbackLean notshowing clickable" src="water-scene-lean-back.png">
+        <img class=" audience" src="audience.svg">
+         <img id="king" class="king" src="the-king-on-his-chair.svg">
 
 		</section>
 
 		<section class="notshowing scene scene7">
-			<div class="cross"></div>
 			<img src="animations/esmeralda-praying.gif" class="es-praying">
 			<div class="evil_jean"></div>
 		</section>
 
 		<section class="notshowing scene scene07">
-			<div class="writtenStory2">Written story.....</div>
+			<div class="writtenStory2"></div>
 		</section>
 
 		<section class="notshowing scene scene8">
+		<img class=" move_audience audience" src="audience-sad.svg">
+         <img id="king" class="move_king king" src="the-king-on-his-chair.svg">
+
 
 		</section>
 
 		<section class="notshowing scene scene9">
-			<div class="cross"></div>
+			<img class="quasimodoCrying" id="quasimodoCrying" src="animations/crying-quasimodo.gif"/>
 		</section>
 
 		<section class="notshowing scene scene10">

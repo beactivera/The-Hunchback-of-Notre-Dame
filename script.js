@@ -17,24 +17,51 @@ let esDancing = document.querySelector(".es-dancing");
 let esStanding = document.querySelector(".es-standing");
 let esmeralda = document.querySelector(".esmeralda");
 let audience = document.querySelector(".audience");
+let beat_scene = document.querySelector(".beat-scene");
+let beating = document.querySelector(".beating");
 let kingOfFools = document.querySelector(".kingoffools");
 let shakingFool = document.querySelector(".shakingfool");
 let credits = document.querySelector(".credits");
 let watered = 0;
+let wateredChecked = 0;
+let introAudio = new Audio ('audio/intro_holymusic.mp3')
 
-
-
+setTimeout(displayHint, 3000)
 
 church_intro.addEventListener('click', showScene01); //intro
+window.addEventListener('keyup', fingerUp)
+
+function fingerUp(evt) {
+    console.log(evt.key)
+
+    switch (evt.key) {
+      case "Enter":
+        showScene01()
+      break;
+		}
+}
+
+church_intro.addEventListener("mouseover", playIntroA)
+
+function playIntroA() {
+	introAudio.play();
+}
+
+
+function displayHint () {
+	document.getElementById('hint1').classList.remove('notshowing')
+}
+
 
 function showScene01() { //bells
+	introAudio.pause();
 	scene01.classList.remove("notshowing");
 	scene1.classList.add("notshowing");
 
 	let bellsAudio = new Audio('audio/1_bells.mp3') //selects document
 	bellsAudio.play() //starts music
 
-	setTimeout(showScene2, 15000)
+	setTimeout(showScene2, 7000)
 }
 
 function showScene2() { // dancing
@@ -64,11 +91,21 @@ function startDancingAudio() {
 			//document.getElementsByClassName('hint2').classList.add("notshowing")
 
 
-			setTimeout(showScene02, 11000)
-		}
+			setTimeout(loveScene, 7000)
+
 }
+}
+function loveScene(){
+	console.log('on the screen user see esmeralda & phoebus');
+	audience.classList.add("notshowing");
+	document.getElementById("king").classList.add("notshowing");
+	document.getElementById("phoebus").classList.add("notshowing")
+	document.getElementById("phoebusHorse").classList.remove("notshowing")
+	document.getElementById("phoebusHorse").classList.add("phoebusHorseR")
 
 
+	setTimeout(showScene02,4000)
+}
 
 function showScene02() { //written story 1
 
@@ -82,10 +119,11 @@ function showScene02() { //written story 1
 
 
 function showScene3() { //chaseing
+		setTimeout(delayAnimation3, 1800)
 		scene3.classList.remove("notshowing");
 		scene02.classList.add("notshowing");
 
-		let screamAudio = new Audio('audio/3_newchase.mp3');
+		let screamAudio = new Audio('audio/3_newchase_2.mp3');
 		screamAudio.play();
 
 		/*setTimeout(scream, 500)
@@ -95,22 +133,35 @@ function showScene3() { //chaseing
 			screamAudio.play();
 		}*/
 
-		setTimeout(showScene5, 3500)
+		setTimeout(showScene5, 5300)
 }
 
+function delayAnimation3() {
+	chaseAnimation.src = 'animations/Chasing-the-BITCH.gif'
+}
 
 
 function showScene5() { //beaten
 		scene5.classList.remove("notshowing");
 		scene3.classList.add("notshowing");
+	    document.getElementById('beating').classList.add('notshowing');
+
+	    console.log('click on the hunchback');
+	    beat_scene.addEventListener('click', toBeat)
+
+	function toBeat(){
 
 		console.log('whip audio');
 		let whipAudio = new Audio('audio/5_whip.mp3');
 		whipAudio.play();
 
-		setTimeout(showScene6, 13000)
-}
+		document.getElementById("beat-scene").classList.add("notshowing");
+		document.getElementById("beating").classList.remove("notshowing");
 
+
+		setTimeout(showScene6, 13000)
+	}
+}
 
 function showScene6() { //watering
 		console.log('laugh audio');
@@ -142,11 +193,16 @@ function showScene6() { //watering
 			document.getElementById('es-watering').classList.add("notshowing")
 			document.getElementById('hunchbackLean2').classList.remove("notshowing")
 			setTimeout(leanUp2, 250)
+			if (wateredChecked == 0) {
+				let askWater = new Audio('audio/2water.mp3');
+				askWater.play();
+			}
 		}
 
 		function leanUp2() {
 			document.getElementById('hunchbackLean2S').classList.remove("notshowing")
 			document.getElementById('hunchbackLean2').classList.add("notshowing")
+
 		}
 
 		document.getElementById('hunchbackLean2S').addEventListener('click', anotherWater)
@@ -169,13 +225,16 @@ function showScene6() { //watering
 		setTimeout(checkWatered, 9000)
 
 	function checkWatered() {
+		wateredChecked ++
 		console.log('check water status quasimodo')
 		if (watered >= 2) {
 			setTimeout(showScene7, 1000)
 			console.log('polite player tho')
 		} else {
-			setTimeout (checkWatered, 500)
+			setTimeout (checkWatered,3000)
 			console.log('not enough water')
+			let askWater2 = new Audio('audio/1water.mp3');
+			askWater2.play();
 		}
 	}
 
@@ -232,7 +291,7 @@ function showScene6() { //watering
 		dramaticMusicAudio.play();
 		console.log('move to scene8');
 		scene8.classList.remove("notshowing");
-		scene7.classList.add("notshowing");
+		scene07.classList.add("notshowing");
 
 		setTimeout(showScene9, 7000)
 	}
