@@ -113,6 +113,15 @@ body{ width: 100vw;
 	z-index: 1;
 }
 
+.phoebusHorse {
+	position: absolute;
+	bottom:10%;
+	left:5%;
+	height:70%;
+	width:auto;
+	z-index: 2;
+}
+
 .phoebusHorseR {
 	animation: riding 4s linear;
 }
