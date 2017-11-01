@@ -24,12 +24,32 @@ let shakingFool = document.querySelector(".shakingfool");
 let credits = document.querySelector(".credits");
 let watered = 0;
 let wateredChecked = 0;
+let introAudio = new Audio ('audio/intro_holymusic.mp3')
 
 
 
 church_intro.addEventListener('click', showScene01); //intro
+window.addEventListener('keyup', fingerUp)
+
+function fingerUp(evt) {
+    console.log(evt.key)
+
+    switch (evt.key) {
+      case "Enter":
+        showScene01()
+      break;
+		}
+}
+
+church_intro.addEventListener("mouseover", playIntroA)
+
+function playIntroA() {
+	introAudio.play();
+}
+
 
 function showScene01() { //bells
+	introAudio.pause();
 	scene01.classList.remove("notshowing");
 	scene1.classList.add("notshowing");
 
