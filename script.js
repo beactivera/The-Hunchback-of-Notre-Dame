@@ -17,6 +17,8 @@ let esDancing = document.querySelector(".es-dancing");
 let esStanding = document.querySelector(".es-standing");
 let esmeralda = document.querySelector(".esmeralda");
 let audience = document.querySelector(".audience");
+let beat_scene = document.querySelector(".beat-scene");
+let beating = document.querySelector(".beating");
 let kingOfFools = document.querySelector(".kingoffools");
 let shakingFool = document.querySelector(".shakingfool");
 let credits = document.querySelector(".credits");
@@ -120,14 +122,24 @@ function delayAnimation3() {
 function showScene5() { //beaten
 		scene5.classList.remove("notshowing");
 		scene3.classList.add("notshowing");
+	    document.getElementById('beating').classList.add('notshowing');
+	    
+	    console.log('click on the hunchback');
+	    beat_scene.addEventListener('click', toBeat)
 
+	function toBeat(){
+		
 		console.log('whip audio');
 		let whipAudio = new Audio('audio/5_whip.mp3');
 		whipAudio.play();
+		
+		document.getElementById("beat-scene").classList.add("notshowing");
+		document.getElementById("beating").classList.remove("notshowing");
+	
 
 		setTimeout(showScene6, 13000)
+	}
 }
-
 
 function showScene6() { //watering
 		console.log('laugh audio');
