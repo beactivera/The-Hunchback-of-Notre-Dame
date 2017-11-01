@@ -64,11 +64,18 @@ function startDancingAudio() {
 			//document.getElementsByClassName('hint2').classList.add("notshowing")
 
 
-			setTimeout(showScene02, 11000)
-		}
+			setTimeout(loveScene, 7000)
+	
 }
-
-
+}
+function loveScene(){
+	console.log('on the screen user see esmeralda & phoebus');
+	audience.classList.add("notshowing");
+	document.getElementById("king").classList.add("notshowing");
+	
+	
+	setTimeout(showScene02,4000)
+}
 
 function showScene02() { //written story 1
 
