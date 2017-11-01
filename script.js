@@ -26,7 +26,7 @@ let watered = 0;
 let wateredChecked = 0;
 let introAudio = new Audio ('audio/intro_holymusic.mp3')
 
-
+setTimeout(displayHint, 3000)
 
 church_intro.addEventListener('click', showScene01); //intro
 window.addEventListener('keyup', fingerUp)
@@ -45,6 +45,11 @@ church_intro.addEventListener("mouseover", playIntroA)
 
 function playIntroA() {
 	introAudio.play();
+}
+
+
+function displayHint () {
+	document.getElementById('hint1').classList.remove('notshowing')
 }
 
 

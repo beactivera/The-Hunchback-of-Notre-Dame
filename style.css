@@ -15,6 +15,10 @@ body{ width: 100vw;
 	display: none;
 }
 
+.clickable {
+	cursor: pointer;
+}
+
 .scene {
 	width:100%;
 	height: 100%;
@@ -394,7 +398,7 @@ body{ width: 100vw;
 }
 
 .move_king{
-   right: 20%;	
+   right: 20%;
 }
 =======
 >>>>>>> c84bdbd52988c2f70c57061773fb161c96eff848
