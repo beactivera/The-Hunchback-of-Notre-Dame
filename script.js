@@ -79,9 +79,6 @@ function loveScene(){
 	document.getElementById("phoebusHorse").classList.add("phoebusHorseR")
 
 
-
-
-
 	setTimeout(showScene02,4000)
 }
 
@@ -123,19 +120,19 @@ function showScene5() { //beaten
 		scene5.classList.remove("notshowing");
 		scene3.classList.add("notshowing");
 	    document.getElementById('beating').classList.add('notshowing');
-	    
+
 	    console.log('click on the hunchback');
 	    beat_scene.addEventListener('click', toBeat)
 
 	function toBeat(){
-		
+
 		console.log('whip audio');
 		let whipAudio = new Audio('audio/5_whip.mp3');
 		whipAudio.play();
-		
+
 		document.getElementById("beat-scene").classList.add("notshowing");
 		document.getElementById("beating").classList.remove("notshowing");
-	
+
 
 		setTimeout(showScene6, 13000)
 	}

@@ -385,10 +385,18 @@ body{ width: 100vw;
 	width: auto;
 	background-color: #B7B7B7;
 }
-}
+
 
 .scene9{
 }
+
+.quasimodoCrying {
+	bottom: 0px;
+  height: 60%;
+  position: absolute;
+  left: 20%;
+}
+
 
 .scene10{
 	color: white;
