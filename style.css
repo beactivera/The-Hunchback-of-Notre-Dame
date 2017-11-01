@@ -51,9 +51,6 @@ body{ width: 100vw;
 	background-color: white;
 	border: 2px solid #686868;
 	margin:100px;
-}
-
-hint1 p{
 	padding: 80px;
 }
 
@@ -272,7 +269,22 @@ hint1 p{
 	background-color:#B7B7B7;
 }
 
-.beating {
+.beat-scene{
+	position: absolute;
+	top: 60px;
+	left: 20%;
+	height: 50%;
+	filter: drop-shadow(8px 8px 8px white);	
+}
+
+.beating{
+	position: absolute;
+	top: 60px;
+	left: 20%;
+	height: 50%;
+}
+
+/*.beating {
 	position: absolute;
 	bottom: 40%;
 	right: 25%;
@@ -284,7 +296,7 @@ hint1 p{
 	bottom: 40%;
 	right: 35%;
 	width: 7.5%;
-}
+}*/
 
 .scene6{
 	position:relative;
