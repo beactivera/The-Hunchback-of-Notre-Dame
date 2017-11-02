@@ -205,8 +205,10 @@ body{ width: 100vw;
 }
 
 .scene3 img{
+	position: absolute;
 	height: 100%;
 	width: auto;
+	right: 0px;
 }
 
 .cross{
@@ -392,7 +394,6 @@ body{ width: 100vw;
 }
 
 
-<<<<<<< HEAD
 .move_audience{
 	right: 25%;
 }
@@ -400,8 +401,6 @@ body{ width: 100vw;
 .move_king{
    right: 20%;
 }
-=======
->>>>>>> c84bdbd52988c2f70c57061773fb161c96eff848
 
 .scene9{
 }
