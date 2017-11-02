@@ -366,7 +366,7 @@ function gameOver () {
 
 restartBtn.addEventListener('click', reloadTeaser)
 
-       function reloadTeaser(){
+    function reloadTeaser(){
 	   location.reload();
        }
 
