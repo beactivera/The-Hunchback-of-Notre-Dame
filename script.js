@@ -32,6 +32,8 @@ let introAudio = new Audio ('audio/intro_holymusic.mp3')
 let whipBackA = new Audio('audio/bg_crowd.mp3')
 
 let restartBtn = document.querySelector(".restart");
+let restartBtnE = document.querySelector(".restartE");
+
 
 setTimeout(displayHint, 3000)
 
@@ -352,7 +354,11 @@ function showScene6() { //watering
 		credits.classList.remove("notshowing");
 		scene9.classList.add("notshowing");
 
+    restartBtnE.addEventListener('click', reloadTeaserE)
 
+    function reloadTeaserE(){
+    	location.reload();
+    }
 	}
 }
 
