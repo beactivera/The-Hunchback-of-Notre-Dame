@@ -28,6 +28,7 @@ let killed = 0;
 let beatingImg = document.getElementById("beat-scene")
 let wateredChecked = 0;
 let introAudio = new Audio ('audio/intro_holymusic.mp3')
+let restartBtn = document.querySelector(".restart");
 
 setTimeout(displayHint, 3000)
 
@@ -340,11 +341,10 @@ function showScene6() { //watering
 		scene9.classList.add("notshowing");
 
 
-
 	}
 }
 
-
+  
 
 function gameOver () {
   console.log('game is over')
@@ -352,6 +352,13 @@ function gameOver () {
   document.querySelector('.scene').classList.add('notshowing')
 
 }
+
+
+restartBtn.addEventListener('click', reloadTeaser)
+
+       function reloadTeaser(){
+	   location.reload();
+       }
 
 /*
 
