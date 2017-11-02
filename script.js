@@ -23,6 +23,8 @@ let kingOfFools = document.querySelector(".kingoffools");
 let shakingFool = document.querySelector(".shakingfool");
 let credits = document.querySelector(".credits");
 let watered = 0;
+let beated = 0;
+let beatingImg = document.getElementById("beat-scene")
 let wateredChecked = 0;
 let introAudio = new Audio ('audio/intro_holymusic.mp3')
 
@@ -144,24 +146,41 @@ function delayAnimation3() {
 function showScene5() { //beaten
 		scene5.classList.remove("notshowing");
 		scene3.classList.add("notshowing");
-	    document.getElementById('beating').classList.add('notshowing');
+	  beat_scene.addEventListener('click', toBeat)
 
-	    console.log('click on the hunchback');
-	    beat_scene.addEventListener('click', toBeat)
 
-	function toBeat(){
-
+	function toBeat() {
+    beated ++
+    console.log(beated)
 		console.log('whip audio');
-		let whipAudio = new Audio('audio/5_whip.mp3');
+		let whipAudio = new Audio('audio/'+beated+'whip.mp3');
 		whipAudio.play();
+    beatingImg.classList.remove("clickable")
+    beatingImg.src = 'animations/whiping1.gif'
+    setTimeout(checkBeated, 500)
 
-		document.getElementById("beat-scene").classList.add("notshowing");
-		document.getElementById("beating").classList.remove("notshowing");
-
-
-		setTimeout(showScene6, 13000)
 	}
+
+  function checkBeated() {
+  console.log('check beated status quasimodo')
+  console.log(beated)
+  setTimeout(resetbeatImg, 100)
+    if (beated == 3) {
+      setTimeout(showScene6, 3000)
+    }
+
+    if (beated == 5) {
+      setTimeout(gameOver, 100)
+    }
+
+    function resetbeatImg() {
+      beatingImg.src = 'whiping.png'
+      beatingImg.classList.add("clickable")
+    }
+  }
 }
+
+
 
 function showScene6() { //watering
 		console.log('laugh audio');
@@ -319,9 +338,16 @@ function showScene6() { //watering
 		
 		
 	}
+}
+
+<<<<<<< HEAD
 
 
-
+=======
+function gameOver () {
+  console.log('game is over')
+  document.getElementById('gameOver').classList.remove('notshowing')
+>>>>>>> 35765bccb5bb9e5137b19c5a9381dc3535ac259f
 }
 
 /*

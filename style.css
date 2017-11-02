@@ -17,6 +17,7 @@ body{ width: 100vw;
 
 .clickable {
 	cursor: pointer;
+	filter: drop-shadow(8px 8px 8px white);
 }
 
 .scene {
@@ -224,8 +225,10 @@ body{ width: 100vw;
 }
 
 .scene3 img{
+	position: absolute;
 	height: 100%;
 	width: auto;
+	right: 0px;
 }
 
 .cross{
@@ -318,7 +321,6 @@ body{ width: 100vw;
 	top: 60px;
 	left: 20%;
 	height: 50%;
-	filter: drop-shadow(8px 8px 8px white);
 }
 
 .beating{
@@ -411,7 +413,6 @@ body{ width: 100vw;
 }
 
 
-<<<<<<< HEAD
 .move_audience{
 	right: 25%;
 }
@@ -419,8 +420,6 @@ body{ width: 100vw;
 .move_king{
    right: 20%;
 }
-=======
->>>>>>> c84bdbd52988c2f70c57061773fb161c96eff848
 
 .scene9{
 }
@@ -452,4 +451,13 @@ body{ width: 100vw;
 
 .credits h1 p{
 	color:white;
+}
+
+.gameOver {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url('game_over.png');
+	background-size: 100% 100%;
+	z-index: 999;
 }
