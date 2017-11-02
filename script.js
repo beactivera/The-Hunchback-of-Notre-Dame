@@ -249,7 +249,9 @@ function showScene6() { //watering
 
 		}
 
-		setTimeout(checkWatered, 9000)
+    if (killed == 0) {
+		    setTimeout(checkWatered, 9000)
+    }
 
 	function checkWatered() {
 		wateredChecked ++
@@ -364,7 +366,7 @@ function gameOver () {
 
 restartBtn.addEventListener('click', reloadTeaser)
 
-       function reloadTeaser(){
+    function reloadTeaser(){
 	   location.reload();
        }
 
