@@ -165,7 +165,7 @@ function showScene5() { //beaten
   console.log('check beated status quasimodo')
   console.log(beated)
   setTimeout(resetbeatImg, 100)
-    if (beated >= 3) {
+    if (beated == 3) {
       setTimeout(showScene6, 3000)
     }
 
