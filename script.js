@@ -23,6 +23,8 @@ let kingOfFools = document.querySelector(".kingoffools");
 let shakingFool = document.querySelector(".shakingfool");
 let credits = document.querySelector(".credits");
 let watered = 0;
+let beated = 0;
+let beatingImg = document.getElementById("beat-scene")
 let wateredChecked = 0;
 let introAudio = new Audio ('audio/intro_holymusic.mp3')
 
@@ -147,29 +149,38 @@ function showScene5() { //beaten
 	  beat_scene.addEventListener('click', toBeat)
 
 
-	function toBeat(){
+	function toBeat() {
     beated ++
+    console.log(beated)
 		console.log('whip audio');
-		let whipAudio = new Audio('audio/5_whip.mp3');
+		let whipAudio = new Audio('audio/'+beated+'whip.mp3');
 		whipAudio.play();
-		let beatingImg = document.getElementById("beat-scene")
+    beatingImg.classList.remove("clickable")
     beatingImg.src = 'animations/whiping1.gif'
-    setTimeout(resetbeatImg, 500)
+    setTimeout(checkBeated, 500)
 
-		setTimeout(checkBeated, 13000)
 	}
 
-  function resetbeatImg() {
-    beatingImg.src = 'whiping.png'
+  function checkBeated() {
+  console.log('check beated status quasimodo')
+  console.log(beated)
+  setTimeout(resetbeatImg, 100)
+    if (beated >= 3) {
+      setTimeout(showScene6, 3000)
+    }
+
+    if (beated == 5) {
+      setTimeout(gameOver, 100)
+    }
+
+    function resetbeatImg() {
+      beatingImg.src = 'whiping.png'
+      beatingImg.classList.add("clickable")
+    }
   }
 }
 
-function checkBeated() {
-console.log('check beated status quasimodo')
-  if (beated >= 3) {
-    setTimeout(showScene6, 1000)
-  }
-}
+
 
 function showScene6() { //watering
 		console.log('laugh audio');
@@ -326,15 +337,10 @@ function showScene6() { //watering
 		scene9.classList.add("notshowing");
 
 	}
+}
 
-
-
-
-
-
-
-
-
+function gameOver () {
+  console.log('game is over')
 }
 
 /*

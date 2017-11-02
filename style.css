@@ -17,6 +17,7 @@ body{ width: 100vw;
 
 .clickable {
 	cursor: pointer;
+	filter: drop-shadow(8px 8px 8px white);
 }
 
 .scene {
@@ -301,7 +302,6 @@ body{ width: 100vw;
 	top: 60px;
 	left: 20%;
 	height: 50%;
-	filter: drop-shadow(8px 8px 8px white);
 }
 
 .beating{
