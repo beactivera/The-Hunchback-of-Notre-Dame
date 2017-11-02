@@ -29,12 +29,9 @@ let killed2 = 0;
 let beatingImg = document.getElementById("beat-scene")
 let wateredChecked = 0;
 let introAudio = new Audio ('audio/intro_holymusic.mp3')
-<<<<<<< HEAD
 let whipBackA = new Audio('audio/bg_crowd.mp3')
 
-=======
 let restartBtn = document.querySelector(".restart");
->>>>>>> 2c54c0ac0d1f2bf961d636fed31394396cd4366d
 
 setTimeout(displayHint, 3000)
 
