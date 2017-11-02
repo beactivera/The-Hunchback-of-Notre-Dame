@@ -29,6 +29,8 @@ let killed2 = 0;
 let beatingImg = document.getElementById("beat-scene")
 let wateredChecked = 0;
 let introAudio = new Audio ('audio/intro_holymusic.mp3')
+let whipBackA = new Audio('audio/bg_crowd.mp3')
+
 
 setTimeout(displayHint, 3000)
 
@@ -149,6 +151,7 @@ function showScene5() { //beaten
 		scene5.classList.remove("notshowing");
 		scene3.classList.add("notshowing");
 	  beat_scene.addEventListener('click', toBeat)
+    whipBackA.play();
 
 
 	function toBeat() {
@@ -171,7 +174,7 @@ function showScene5() { //beaten
       setTimeout(showScene6, 3000)
     }
 
-    if (beated == 5) {
+    if (beated >= 5) {
       setTimeout(gameOver, 100)
       killed ++
     }
@@ -185,6 +188,7 @@ function showScene5() { //beaten
 
 
 function showScene6() { //watering
+    whipBackA.pause();
     if (killed == 0) {
 		      let waterAudio = new Audio('audio/6_water.mp3');
 		      waterAudio.play();
@@ -355,11 +359,6 @@ function gameOver () {
   document.getElementById('gameOver').classList.remove('notshowing')
   document.querySelector('.scene').classList.add('notshowing')
 
-
-  $('audio').each(function(){
-    this.pause(); // Stop playing
-    this.currentTime = 0; // Reset time
-  });
 }
 
 /*
