@@ -341,6 +341,7 @@ function showScene6() { //watering
 
 function gameOver () {
   console.log('game is over')
+  document.getElementById('gameOver').classList.remove('notshowing')
 }
 
 /*
