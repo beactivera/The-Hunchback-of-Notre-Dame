@@ -339,23 +339,18 @@ function showScene6() { //watering
 		credits.classList.remove("notshowing");
 		scene9.classList.add("notshowing");
 
-		
-		
+
+
 	}
 }
 
-<<<<<<< HEAD
 
 
-=======
 function gameOver () {
   console.log('game is over')
   document.getElementById('gameOver').classList.remove('notshowing')
-<<<<<<< HEAD
   document.querySelector('.scene').classList.add('notshowing')
-=======
->>>>>>> 35765bccb5bb9e5137b19c5a9381dc3535ac259f
->>>>>>> 87e624247230a1f093fd0ebaf44bb96fcbb3aa5d
+
 }
 
 /*
