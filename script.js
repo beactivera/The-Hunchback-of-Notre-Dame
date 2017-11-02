@@ -144,23 +144,31 @@ function delayAnimation3() {
 function showScene5() { //beaten
 		scene5.classList.remove("notshowing");
 		scene3.classList.add("notshowing");
-	    document.getElementById('beating').classList.add('notshowing');
+	  beat_scene.addEventListener('click', toBeat)
 
-	    console.log('click on the hunchback');
-	    beat_scene.addEventListener('click', toBeat)
 
 	function toBeat(){
-
+    beated ++
 		console.log('whip audio');
 		let whipAudio = new Audio('audio/5_whip.mp3');
 		whipAudio.play();
+		let beatingImg = document.getElementById("beat-scene")
+    beatingImg.src = 'animations/whiping1.gif'
+    setTimeout(resetbeatImg, 500)
 
-		document.getElementById("beat-scene").classList.add("notshowing");
-		document.getElementById("beating").classList.remove("notshowing");
-
-
-		setTimeout(showScene6, 13000)
+		setTimeout(checkBeated, 13000)
 	}
+
+  function resetbeatImg() {
+    beatingImg.src = 'whiping.png'
+  }
+}
+
+function checkBeated() {
+console.log('check beated status quasimodo')
+  if (beated >= 3) {
+    setTimeout(showScene6, 1000)
+  }
 }
 
 function showScene6() { //watering
