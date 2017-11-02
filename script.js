@@ -170,7 +170,6 @@ function showScene6() { //watering
 		console.log('move to scene6');
 		scene6.classList.remove("notshowing");
 		scene5.classList.add("notshowing");
-
 		setTimeout (leanUp, 250)
 
 		function leanUp() {
@@ -317,13 +316,9 @@ function showScene6() { //watering
 		credits.classList.remove("notshowing");
 		scene9.classList.add("notshowing");
 
+		
+		
 	}
-
-
-
-
-
-
 
 
 
