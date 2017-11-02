@@ -88,6 +88,7 @@ let danceClick = 0
 
 function startDancingAudio() {
 		console.log('fun startDancingAudio executed')
+	   audience.classList.remove("audienceMoving");
 		if (danceClick == 0) {
 			danceClick ++
 			console.log('danceClick is' + danceClick)

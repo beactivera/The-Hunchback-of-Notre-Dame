@@ -197,7 +197,7 @@ body{ width: 100vw;
 }
 
 .audienceMoving{
-	animation: moving 1.2s linear infinite forwards;
+	animation: moving 1.2s ease-in-out infinite forwards;
 }
 
 @keyframes moving {
