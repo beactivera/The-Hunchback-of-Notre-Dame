@@ -25,9 +25,12 @@ let credits = document.querySelector(".credits");
 let watered = 0;
 let beated = 0;
 let killed = 0;
+let killed2 = 0;
 let beatingImg = document.getElementById("beat-scene")
 let wateredChecked = 0;
 let introAudio = new Audio ('audio/intro_holymusic.mp3')
+let whipBackA = new Audio('audio/bg_crowd.mp3')
+
 let restartBtn = document.querySelector(".restart");
 
 setTimeout(displayHint, 3000)
@@ -150,6 +153,7 @@ function showScene5() { //beaten
 		scene5.classList.remove("notshowing");
 		scene3.classList.add("notshowing");
 	  beat_scene.addEventListener('click', toBeat)
+    whipBackA.play();
 
 
 	function toBeat() {
@@ -172,7 +176,7 @@ function showScene5() { //beaten
       setTimeout(showScene6, 3000)
     }
 
-    if (beated == 5) {
+    if (beated >= 5) {
       setTimeout(gameOver, 100)
       killed ++
     }
@@ -185,16 +189,16 @@ function showScene5() { //beaten
 }
 
 
-
 function showScene6() { //watering
-  if (killed == 0) {
-		console.log('laugh audio');
-		let waterAudio = new Audio('audio/6_water.mp3');
-		waterAudio.play();
-		console.log('move to scene6');
-		scene6.classList.remove("notshowing");
-		scene5.classList.add("notshowing");
-		setTimeout (leanUp, 250)
+    whipBackA.pause();
+    if (killed == 0) {
+		      let waterAudio = new Audio('audio/6_water.mp3');
+		      waterAudio.play();
+		      console.log('move to scene6');
+		      scene6.classList.remove("notshowing");
+		      scene5.classList.add("notshowing");
+		      setTimeout (leanUp, 250)
+    }
 
 		function leanUp() {
 			document.getElementById('hunchbackLeanS').classList.remove("notshowing")
@@ -250,10 +254,14 @@ function showScene6() { //watering
 	function checkWatered() {
 		wateredChecked ++
 		console.log('check water status quasimodo')
-		if (watered >= 2) {
+    if (watered >= 5) {
+      setTimeout(gameOver, 100)
+      killed2 ++
+    }
+    if (watered >= 2) {
 			setTimeout(showScene7, 1000)
 			console.log('polite player tho')
-		} else {
+		} else if (watered <= 4) {
 			setTimeout (checkWatered,3000)
 			console.log('not enough water')
 			let askWater2 = new Audio('audio/1water.mp3');
@@ -262,16 +270,17 @@ function showScene6() { //watering
 	}
 
 	function showScene7() { //praying
-		console.log('holymusic audio');
-		let holyMusicAudio = new Audio('audio/7_eviltalk.mp3');
-		holyMusicAudio.play();
-		console.log('move to scene3');
-		scene7.classList.remove("notshowing");
-		scene6.classList.add("notshowing");
+    if (killed2 == 0) {
+		  let holyMusicAudio = new Audio('audio/7_eviltalk.mp3');
 
-		setTimeout(showScene07, 10000)
+		  holyMusicAudio.play();
+		  console.log('move to scene3');
+		  scene7.classList.remove("notshowing");
+		  scene6.classList.add("notshowing");
 
-	}
+		  setTimeout(showScene07, 10000)
+    }
+
 }
 /*		console.log('dance audio');
 		let danceAudio = new Audio('audio/7_dance.mp3');
@@ -344,8 +353,6 @@ function showScene6() { //watering
 
 	}
 }
-
-  
 
 function gameOver () {
   console.log('game is over')
